@@ -1,0 +1,120 @@
+# liblouis: brf 2 unicode braille table.
+#
+# Copyright (C) 2014, maintained by Mesar Hameed <mesar.hameed@gmail.com>
+#
+# This file is part of liblouis.
+#
+# liblouis is free software: you can redistribute it and/or modify it
+# under the terms of the GNU Lesser General Public License as
+# published by the Free Software Foundation, either version 2.1 of
+# the License, or (at your option) any later version.
+#
+# liblouis is distributed in the hope that it will be useful, but
+# WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+# Lesser General Public License for more details.
+#
+# You should have received a copy of the GNU Lesser General Public
+# License along with liblouis. If not, see
+# <http://www.gnu.org/licenses/>.
+#
+# http://en.wikipedia.org/wiki/Braille_ASCII
+
+include unicode.dis
+
+# Map uppercase/lowercase input to the same dot representation.
+# Depending on the software that produced the brf file, it could be either.
+# Most hardware doesn't distinguish between the two, so neither should we.
+
+sign A 1
+sign a 1
+sign B 12
+sign b 12
+sign C 14
+sign c 14
+sign D 145
+sign d 145
+sign E 15
+sign e 15
+sign F 124
+sign f 124
+sign G 1245
+sign g 1245
+sign H 125
+sign h 125
+sign I 24
+sign i 24
+sign J 245
+sign j 245
+sign K 13
+sign k 13
+sign L 123
+sign l 123
+sign M 134
+sign m 134
+sign N 1345
+sign n 1345
+sign O 135
+sign o 135
+sign P 1234
+sign p 1234
+sign Q 12345
+sign q 12345
+sign R 1235
+sign r 1235
+sign S 234
+sign s 234
+sign T 2345
+sign t 2345
+sign U 136
+sign u 136
+sign V 1236
+sign v 1236
+sign W 2456
+sign w 2456
+sign X 1346
+sign x 1346
+sign Y 13456
+sign y 13456
+sign Z 1356
+sign z 1356
+
+# everything else
+
+sign 0 356
+sign 1 2
+sign 2 23
+sign 3 25
+sign 4 256
+sign 5 26
+sign 6 235
+sign 7 2356
+sign 8 236
+sign 9 35
+sign ' 3
+sign @ 4
+sign " 5
+sign , 6
+sign * 16
+sign / 34
+sign - 36
+sign ^ 45
+sign . 46
+sign ; 56
+sign < 126
+sign % 146
+sign : 156
+sign [ 246
+sign > 345
+sign + 346
+sign _ 456
+sign $ 1246
+sign \\ 1256
+sign ? 1456
+sign ! 2346
+sign # 3456
+sign & 12346
+sign ( 12356
+sign ] 12456
+sign ) 23456
+sign = 123456
