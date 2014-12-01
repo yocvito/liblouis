@@ -21,10 +21,15 @@ install:
 # let's have two parallel builds. One with ucs4 disabled and the other
 # enabling it
 env:
-  - ENABLE_UCS4=
-  - ENABLE_UCS4=--enable-ucs4
-
+  - UCS4=
+  - UCS4=ucs4
+before_script:
+  - export CI_DESC=$(git describe)
+  - if [ "$UCS4" != "" ]; then export ENABLE_UCS4=--enable-ucs4; else ENABLE_UCS4=""; fi
 script: "./autogen.sh && ./configure $ENABLE_UCS4 && make && make check"
+after_script:
+  - rename "s/liblouis-.*.tar.gz/liblouis-${UCS4}-${CI_DESC}.tar.gz/" *.gz
+  - ls -1 *.gz
 
 # tell the irc channel about the results of the build
 notifications:
