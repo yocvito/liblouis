@@ -21,15 +21,19 @@ install:
 # let's have two parallel builds. One with ucs4 disabled and the other
 # enabling it
 env:
-  - UCS4=
-  - UCS4=ucs4
+  global:
+    - secure: "l9SiSJXf8uwyc7XZXD3/hzrFupvslrNm/mXLbdqV32A3nrc+nli3WFqq0WMK\nGH3131FscIRgsQdzhDWFpp4HLFWy0/xobnjICytR07mEtbE+E9rnrHekTPCS\nQJYSSKIJYadAE0SFGT8/S76ezdVpDLbwnRzW2wKxSA0MoHv/OKM="
+  matrix:
+    - UCS4=
+    - UCS4=ucs4
 before_script:
   - export CI_DESC=$(git describe)
   - if [ "$UCS4" != "" ]; then export ENABLE_UCS4=--enable-ucs4; else ENABLE_UCS4=""; fi
 script: "./autogen.sh && ./configure $ENABLE_UCS4 && make && make check && make dist"
-after_script:
+after_success:
   - rename "s/liblouis-.*.tar.gz/liblouis-${UCS4}-${CI_DESC}.tar.gz/" *.gz
   - ls -1 *.gz
+  - openssl aes-256-cbc -k '$DEPLOY_KEY' -in travis_ll_rsa.encrypted -d -a -out travis_ll_rsa
 
 # tell the irc channel about the results of the build
 notifications:
