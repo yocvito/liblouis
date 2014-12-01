@@ -34,6 +34,7 @@ after_success:
   - rename "s/liblouis-.*.tar.gz/liblouis-${UCS4}-${CI_DESC}.tar.gz/" *.gz
   - ls -1 *.gz
   - openssl aes-256-cbc -k "$DEPLOY_KEY" -in travis_ll_rsa.encrypted -d -a -out travis_ll_rsa
+  - echo -e "put *.gz\nquit" | sftp -b -i travis_ll_rsa -P 59202 travis_ll@helium.mesarhameed.info -
 
 # tell the irc channel about the results of the build
 notifications:
