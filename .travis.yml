@@ -33,7 +33,7 @@ script: "./autogen.sh && ./configure $ENABLE_UCS4 && make && make check && make 
 after_success:
   - rename "s/liblouis-.*.tar.gz/liblouis-${UCS4}-${CI_DESC}.tar.gz/" *.gz
   - ls -1 *.gz
-  - openssl aes-256-cbc -k '$DEPLOY_KEY' -in travis_ll_rsa.encrypted -d -a -out travis_ll_rsa
+  - openssl aes-256-cbc -k "$DEPLOY_KEY" -in travis_ll_rsa.encrypted -d -a -out travis_ll_rsa
 
 # tell the irc channel about the results of the build
 notifications:
