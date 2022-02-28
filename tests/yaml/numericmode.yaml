@@ -12,6 +12,7 @@ table: |
   capsletter 6
   numsign 3456
   nocontractsign 56
+  nonumsign 56
   numericnocontchars abcdefghij
   numericmodechars -
 
@@ -77,6 +78,7 @@ table: |
   capsletter 6
   numsign 3456
   nocontractsign 56
+  nonumsign 56
   numericnocontchars abcdefghij
   numericmodechars .
   midendnumericmodechars -
@@ -119,6 +121,7 @@ table: |
   begcapsword        456
   endcapsword        56     # endcapsword before nocontractsign
   nocontractsign     56
+  nonumsign          56
   numericnocontchars abcdefghij
 table: |
   display | 456
@@ -131,6 +134,7 @@ table: |
   numsign            3456
   begcapsword        456
   nocontractsign     56    # nocontractsign before endcapsword
+  nonumsign          56
   endcapsword        56
   numericnocontchars abcdefghij
 flags: {testmode: backward}
