@@ -160,6 +160,7 @@ def main(argc, argv):
     nuaf = 0
     nml = 0
     ndf = 0
+    nil = 0
     print(colored('[Bugs Report]', 'yellow', attrs=['bold']))
     with open('fuzzer-bug-reports.txt', 'w') as fp:
         for bug in bugReports:
@@ -174,6 +175,8 @@ def main(argc, argv):
                 nuaf += 1
             elif bugtype == BugType.DOUBLEFREE:
                 ndf += 1
+            elif bugtype == BugType.INFINITELOOP:
+                nil += 1
             print(str(bug))
             fp.write(str(bug) + '\n')
             
@@ -184,6 +187,7 @@ def main(argc, argv):
     print('[-] memory leaks: ', nml)
     print("[-] use after free's: ", nuaf)
     print("[-] double free's: ", ndf)
+    print("[-] infinite loops: ", nil)
     
     exit(1)     # make git push fails
         
