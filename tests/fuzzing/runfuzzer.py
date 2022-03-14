@@ -1,14 +1,12 @@
 #!/bin/python3
 
-from posixpath import basename
-from pty import STDERR_FILENO, STDOUT_FILENO
-from socket import timeout
-from stat import S_IRUSR, S_IWUSR
 import sys
 import os
 import magic
 import time
-from pexpect import TIMEOUT
+from posixpath import basename
+from pty import STDERR_FILENO
+from stat import S_IRUSR, S_IWUSR
 from pwn import *
 from enum import Enum
 from termcolor import colored
@@ -86,7 +84,14 @@ class Fuzzer:
                     nexterr = line.find('ERROR')
                     if nexterr != -1:
                         reason = line.split(':')[-1].lstrip().split(' ')[0]
-                        print(reason)
+                        if reason.find('heap-buffer-overflow') != -1:
+                            self.bugs.append(BugReport(basename(self.path), \
+                    BugType.HEAPOVERFLOW, self.seed, 'Heap buffer overflow in binary'))
+                        elif reason.find('stack-buffer-overlow') != -1:
+                            self.bugs.append(BugReport(basename(self.path), \
+                    BugType.STACKOVERFLOW, self.seed, 'Stack buffer overflow in binary'))
+                            
+                            
                 trace = fp.read(4096)
         
     def getpath(self):
