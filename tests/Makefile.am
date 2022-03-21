@@ -1,3 +1,4 @@
+AUTOMAKE_OPTIONS = subdir-objects
 SUBDIRS = tables tablesWithMetadata yaml braille-specs ueb_test_data
 
 AM_CPPFLAGS =					\
@@ -286,3 +287,9 @@ AM_TESTS_ENVIRONMENT =								\
 	WINEPATH=$(top_builddir)/tools						\
 	WINE=$(WINE)								\
 	EXEEXT=$(EXEEXT)
+
+fuzzing_my_fuzzer_SOURCES = fuzzing/my_fuzzer.c
+bin_PROGRAMS =  fuzzing/my_fuzzer
+fuzzing_my_fuzzer_LDADD =  $(top_builddir)/liblouis/liblouis.la
+fuzzing_my_fuzzer_CFLAGS= -fsanitize=address,fuzzer -O2 -fno-omit-frame-pointer -g -fsanitize-coverage=edge $(AM_CPPFLAGS)
+fuzzing_my_fuzzer_LDFLAGS= -fsanitize=address,fuzzer -static -lm  -fsanitize-coverage=edge ${PCAUDIOLIB_LIBS}
