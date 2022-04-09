@@ -70,19 +70,18 @@ table_files = \
 	de-chardefs6.cti \
 	de-chardefs8.cti \
 	de-chess.ctb \
+	de-comp6.utb \
 	de-de-comp8.ctb \
 	de-de.dis \
 	de-eurobrl6.dis \
 	de-eurobrl6u.dis \
 	de-g0-core.uti \
 	de-g0.utb \
-	de-g0-bidi-core.uti \
-	de-g0-bidi.utb \
+	de-g0-detailed.utb \
 	de-g1-core.cti \
 	de-g1-core-patterns.dic \
 	de-g1.ctb \
-	de-g1-bidi.ctb \
-	de-g1-bidi-core.cti \
+	de-g1-detailed.ctb \
 	de-g2-core.cti \
 	de-g2-core-patterns.dic \
 	de-g2.ctb \
@@ -171,6 +170,7 @@ table_files = \
 	hr-g1.tbl \
 	hr-translation.cti \
 	hu-backtranslate-correction.dis \
+	hu-backtranslate-word-corrections.cti \
 	hu-chardefs.cti \
 	hu-exceptionwords.cti \
 	hu-hu-comp8.ctb \
@@ -238,6 +238,7 @@ table_files = \
 	litdigits6Dots.uti \
 	loweredDigits6Dots.uti \
 	loweredDigits8Dots.uti \
+	latinLowercase.uti \
 	lt-6dot.tbl \
 	lt-6dot.utb \
 	lt.ctb \

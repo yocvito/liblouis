@@ -390,6 +390,7 @@ swapTest(int swapIC, int *pos, const TranslationTableHeader *table, const InStri
 	swapRule = (TranslationTableRule *)&table->ruleArea[swapRuleOffset];
 	while (p - *pos < passInstructions[swapIC + 3]) {
 		int test;
+		if (p >= input->length) return 0;
 		if (swapRule->opcode == CTO_SwapDd) {
 			for (test = 1; test < swapRule->charslen; test += 2) {
 				if (input->chars[p] == swapRule->charsdots[test]) break;
@@ -408,6 +409,10 @@ swapTest(int swapIC, int *pos, const TranslationTableHeader *table, const InStri
 	}
 	while (p - *pos < passInstructions[swapIC + 4]) {
 		int test;
+		if (p >= input->length) {
+			*pos = p;
+			return 1;
+		}
 		if (swapRule->opcode == CTO_SwapDd) {
 			for (test = 1; test < swapRule->charslen; test += 2) {
 				if (input->chars[p] == swapRule->charsdots[test]) break;
@@ -2265,7 +2270,7 @@ undefinedCharacter(widechar c, const TranslationTableHeader *table, int pos,
 
 	const char *text = (mode & noUndefined) ? "" : _lou_showString(&c, 1, 1);
 	size_t length = strlen(text);
-	widechar dots[length];
+	widechar dots[length == 0 ? 1 : length];
 
 	for (unsigned int k = 0; k < length; k += 1) {
 		dots[k] = 0;
@@ -3520,7 +3525,8 @@ checkNumericMode(const TranslationTableHeader *table, int pos, const InString *i
 	if (!*numericMode) {
 		if (checkCharAttr(input->chars[pos], CTC_Digit | CTC_LitDigit, table)) {
 			*numericMode = 1;
-			*dontContract = 1;
+			/* if the noContractSign is defined disable contraction */
+			if (table->noContractSign) *dontContract = 1;
 			for_updatePositions(&indicRule->charsdots[0], 0, indicRule->dotslen, 0, pos,
 					input, output, posMapping, cursorPosition, cursorStatus);
 		} else if (checkCharAttr(input->chars[pos], CTC_NumericMode, table)) {
@@ -3543,6 +3549,8 @@ checkNumericMode(const TranslationTableHeader *table, int pos, const InString *i
 					CTC_Digit | CTC_LitDigit | CTC_NumericMode | CTC_MidEndNumericMode,
 					table)) {
 			*numericMode = 0;
+			if (!brailleIndicatorDefined(table->noContractSign, table, &indicRule))
+				*dontContract = 0;
 			if (brailleIndicatorDefined(table->noContractSign, table, &indicRule))
 				if (checkCharAttr(input->chars[pos], CTC_NumericNoContract, table))
 					for_updatePositions(&indicRule->charsdots[0], 0, indicRule->dotslen,

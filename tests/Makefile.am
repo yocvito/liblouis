@@ -93,13 +93,14 @@ dist_braille_specs_TESTS =				  \
 	braille-specs/da-dk-g28-dictionary_harness.yaml	  \
 	braille-specs/da-dk-g28.yaml			  \
 	braille-specs/da-dk-g28l.yaml			  \
+	braille-specs/de-comp6.yaml			  \
 	braille-specs/de-de-comp8.yaml 			  \
 	braille-specs/de-eurobrl6.yaml			  \
-	braille-specs/de-g0-bidi-dictionary.yaml	  \
-	braille-specs/de-g0-bidi-specs.yaml		  \
+	braille-specs/de-g0-detailed-dictionary.yaml	  \
+	braille-specs/de-g0-detailed-specs.yaml		  \
 	braille-specs/de-g0.yaml			  \
-	braille-specs/de-g1-bidi-dictionary.yaml	  \
-	braille-specs/de-g1-bidi-specs.yaml		  \
+	braille-specs/de-g1-detailed-dictionary.yaml	  \
+	braille-specs/de-g1-detailed-specs.yaml		  \
 	braille-specs/de-g1.yaml			  \
 	braille-specs/de-g1-dictionary.yaml		  \
 	braille-specs/de-g2.yaml			  \
@@ -156,8 +157,12 @@ dist_braille_specs_TESTS =				  \
 	braille-specs/hu-hu-comp8_harness.yaml		  \
 	braille-specs/hu-hu-g1_backward.yaml		  \
 	braille-specs/hu-hu-g1_harness.yaml		  \
+	braille-specs/hu-hu-g1_braille_input_backward.yaml\
+	braille-specs/hu-hu-g1_braille_input_forward.yaml \
+	braille-specs/hu-hu-g1-numbers.yaml		  \
 	braille-specs/hu-hu-g2_harness.yaml 		  \
 	braille-specs/hu-hu-g2_backward.yaml 		  \
+	braille-specs/hu-hu-g2-numbers.yaml		  \
 	braille-specs/iu-ca-g1_harness.yaml		  \
 	braille-specs/ja-kantenji.yaml			  \
 	braille-specs/kk.yaml				  \
