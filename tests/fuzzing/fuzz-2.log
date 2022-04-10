@@ -1,0 +1,13 @@
+INFO: Seed: 1343095227
+INFO: Loaded 1 modules   (7 inline 8-bit counters): 7 [0x5e8bd7, 0x5e8bde), 
+INFO: Loaded 1 PC tables (7 PCs): 7 [0x5a2a50,0x5a2ac0), 
+INFO:      995 files found in CHAR_CORPUS/
+INFO: -max_len is not provided; libFuzzer will not generate inputs larger than 4096 bytes
+INFO: seed corpus: files: 995 min: 1b max: 4096b total: 202659b rss: 28Mb
+#996	INITED cov: 5 ft: 13 corp: 8/60b exec/s: 0 rss: 94Mb
+#6292	REDUCE cov: 5 ft: 13 corp: 8/58b lim: 96 exec/s: 0 rss: 356Mb L: 3/41 MS: 1 EraseBytes-
+#7612	REDUCE cov: 5 ft: 13 corp: 8/55b lim: 108 exec/s: 0 rss: 367Mb L: 6/41 MS: 5 ChangeByte-ShuffleBytes-ShuffleBytes-ShuffleBytes-EraseBytes-
+#12609	REDUCE cov: 5 ft: 13 corp: 8/52b lim: 153 exec/s: 0 rss: 376Mb L: 3/41 MS: 2 EraseBytes-ChangeBit-
+#65536	pulse  cov: 5 ft: 13 corp: 8/52b lim: 676 exec/s: 16384 rss: 436Mb
+#131072	pulse  cov: 5 ft: 13 corp: 8/52b lim: 1327 exec/s: 11915 rss: 437Mb
+==78574== libFuzzer: run interrupted; exiting

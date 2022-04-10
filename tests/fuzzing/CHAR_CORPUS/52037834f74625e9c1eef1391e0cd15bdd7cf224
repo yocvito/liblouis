@@ -1,0 +1,13 @@
+sÿÿÿÿ"touch /tmp/blns.fail"]}
+
+#	Command Injection (Ruby)
+#
+#	Strings which can call system commands within Ruby/Rails applications
+
+eval("puts 'hello world'")
+Syst_m("ls -al /")
+`ls -al /`
+Kernel.exec("lfail; }
+<<< %s(un='%s') = 	MSDOS/Windows Special Filenames
+#
+#	Strings which ai~g="ISO-8859-1"?><!DOCTYPE foo [ <!ELEMENT foo ANY ><!ENTITY xxe SYSTEM "filet	r#Sngs whicd re reserved charin thacterse i nw 

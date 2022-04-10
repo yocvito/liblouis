@@ -1,0 +1,94 @@
+้้้้็็็็ ด้้้้้็็็็็้้้้้็็็็็้้้้้้้้็็็็็้้้้้็็็็็้้้้้้้้็็็็็้้้้้็็็็็้้้้้้้้็็็็็้้้้้็็็็ ด้้้้้็็็็็้้้้้็็็็็้้้้้้้้็็็็็้้้้้็็็็็้้้้้้้็็็้้้้้้้้็็็็็้้้้้็็็็็้้้้้้้้็็็็็้้้้้็็็็ ด้้้้้็็็็็้้้้้็็็็็้้้้้้้้็็็็็้้้้้็็็็็้้้้้้้้็็็็็้้้้้็็็็็้้้้้้้้็็็็็้้้้้็็็็
+
+#	Quotation Marks
+#
+#	Strings which contain misplaced quotation marks; can cause encoding errors
+
+'
+"
+''
+""
+'"'
+"''''"'"
+"'"'"''''"
+<foo val=“bar” />
+<foo val=“bar” />
+<foo val=”bar“ />
+<foo val=`bar' />
+
+#	Two-Byte Characters
+#
+#	Strings which contain two-byte characters: can cause rendering issues or character-length issues
+
+田中さんにあげて下さい
+パーティーへ行かないか
+和製漢語
+部落格
+사회과학원 어학연구#	Reserved Strings
+#
+#	Strings which may be used elsewhere in code
+
+undefined
+undef
+null
+NULL
+(null)
+nil
+NIL
+true
+false
+True
+False
+TRUE
+FALSE
+None
+hasOwnProperty
+\
+\\
+
+#	Numeric Strings
+#
+#	Strings which ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::can be interpreted as numericval=“bar” />
+<foo val=”bar“ />
+<foo val=`bar' />
+
+#	Two-Byte Characters
+#
+#	Strings which contain two-byte characters: can cause rendering issues or character-length issues
+
+田中さんにあげて下さい
+パーティーへ行かないか
+和製漢語
+部落格
+사회과학원 어학연구#	Reserved Strings
+#
+#	Strings which may be used elsewhere in code
+
+undefined
+undef
+null
+NULL
+(null)
+nil
+NIL
+true
+false
+True
+False
+TRUE
+FALSE
+None
+hasOwnProperty
+\
+\\
+
+#	Numeric Strings
+#
+#	Strings which ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::can be interpreted as numeric
+
+1
+1
+1.소
+찦차를 타고 온 �00
+��$1.00�맨�
+1/

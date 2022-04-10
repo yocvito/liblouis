@@ -1,0 +1,16 @@
+INFO: Seed: 817774297
+INFO: Loaded 1 modules   (7 inline 8-bit counters): 7 [0x5e8bd7, 0x5e8bde), 
+INFO: Loaded 1 PC tables (7 PCs): 7 [0x5a2a50,0x5a2ac0), 
+INFO:      940 files found in CHAR_CORPUS/
+INFO: -max_len is not provided; libFuzzer will not generate inputs larger than 4096 bytes
+INFO: seed corpus: files: 940 min: 1b max: 4096b total: 202292b rss: 28Mb
+#941	INITED cov: 5 ft: 13 corp: 8/60b exec/s: 0 rss: 91Mb
+#8793	REDUCE cov: 5 ft: 13 corp: 8/59b lim: 120 exec/s: 0 rss: 369Mb L: 4/41 MS: 2 InsertByte-EraseBytes-
+#8877	REDUCE cov: 5 ft: 13 corp: 8/58b lim: 120 exec/s: 0 rss: 369Mb L: 3/41 MS: 4 EraseBytes-ShuffleBytes-ChangeByte-InsertByte-
+#10224	REDUCE cov: 5 ft: 13 corp: 8/53b lim: 132 exec/s: 0 rss: 374Mb L: 4/41 MS: 2 EraseBytes-CrossOver-
+#18461	REDUCE cov: 5 ft: 13 corp: 8/52b lim: 209 exec/s: 18461 rss: 383Mb L: 3/41 MS: 1 EraseBytes-
+#32768	pulse  cov: 5 ft: 13 corp: 8/52b lim: 346 exec/s: 10922 rss: 403Mb
+#65536	pulse  cov: 5 ft: 13 corp: 8/52b lim: 676 exec/s: 8192 rss: 417Mb
+#131072	pulse  cov: 5 ft: 13 corp: 8/52b lim: 1327 exec/s: 6241 rss: 432Mb
+#131956	REDUCE cov: 5 ft: 13 corp: 8/49b lim: 1337 exec/s: 6283 rss: 432Mb L: 38/38 MS: 1 EraseBytes-
+==72006== libFuzzer: run interrupted; exiting

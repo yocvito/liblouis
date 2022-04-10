@@ -1,13 +1,31 @@
 #include <stdlib.h>
 #include <stdint.h>
 #include <stdio.h>
-#include "../../liblouis/liblouis.h"
-#define BUF_MAX 27720
+
+#include <liblouis.h>
+
+#define BUF_MAX 4096
+#define WBUF_MAX 4096*2
+
+#define LANGUAGE	"en"
+
+
 static widechar inputText[BUF_MAX] , output1Text[BUF_MAX];
  static int inputPos[BUF_MAX], outputPos[BUF_MAX];
  static formtype emp1[BUF_MAX];
 static int inputLen , output1Len;
- int
+
+extern int LLVMFuzzerTestOneInput(const uint8_t *data, size_t size);
+extern int LLVMFuzzerInitialize(const int* argc, char*** argv);
+
+int
+LLVMFuzzerInitialize(const int *argc, char ***argv)
+{
+
+}
+
+
+int
 LLVMFuzzerTestOneInput(const uint8_t *data, size_t size)
 {
 	char new_file[256];

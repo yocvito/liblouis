@@ -1,0 +1,12 @@
+sÿÿÿÿ"touch /tmp/blns.fail"]}
+
+#	Command Injection (Ruby)
+#
+#	Strings which can call system commands within Ruby/Rails appl
+#	MSDOS/Windows Special Filenames
+#
+#	Strings which ai~g="ISO-8859-1"?><!DOCTYPE foo [ <!ELEMENT foo ANY ><!ENTITY xxe SYSTEM "file:///etc/passwd" >]><foo>&xxe;</foo>
+
+#	Unwanted Interpolation
+i
+#ti nw 

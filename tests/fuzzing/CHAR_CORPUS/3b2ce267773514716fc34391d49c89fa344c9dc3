@@ -1,0 +1,115 @@
+stem "touch /tmp/blns.fail"]}
+
+#	Command Injection (Ruby)
+#
+#	Strings which can call system commands within Ruby/Rails applications
+
+eval("puts 'hello world'")
+System("ls -al /")
+`ls -al /`
+Kernel.exec("ls -al /")
+Kernel.exit(1)
+%x('ls -al /')
+
+#      XXE Injection (XML)
+#
+#	String which can reveal system files when parsed by a badly configured XML parser
+
+<?xml version="1.0" encoding="ISO-8859-1"?><!DOCTYPE foo [ <!ELEMENT foo ANY ><!ENTITY xxe SYSTEM "file:///etc/passwd" >]><foo>&xxe;</foo>
+
+#	Unwanted Interpolation
+#
+#	Strings which can be accidentally expanded into different strings if evaluated in the wrong context, e.g. used as a printf format string or via Perl or shell eval. Might expose sensitive data from the program doing the interpolation, or might just represent the wrong string.
+
+$HOME
+$ENV{'HOME'}
+%d
+%s%s%s%s%s
+{0}
+%*.*s
+%@
+%n
+File:///
+
+#	File Inclusion
+#
+#	Strings which can cause user to pull in files that should not be a part of a web server
+
+../../../../../../../../../../../etc/passwd%00
+../../../../../../../../../../../etc/hosts
+
+#	Known CVEs and Vulnerabilities
+#
+#	Strings that test for known vulnerabilities
+
+() { 0; }; touch /tmp/blns.shellshock1.fail;
+() { _; } >_[$($())] { touch /tmp/blns.shellshock2.fail; }
+<<< %s(un='%s') = %u
++++ATH0
+
+#	MSDOS/Windows Special Filenames
+#
+#	Strings which are reserved characters in MSDOS/Windows
+
+CON
+PRN
+AUX
+CLOCK$
+NUL
+A:
+ZZ:
+COM1
+LPT1
+LPT2
+LPT3
+COM2
+COM3
+COM4
+
+#   IRC specific strings
+#
+#   Strings that may occur on IRC clients that make security products freak out
+
+DCC SEND STARTKEYLOGGER 0 0 0
+
+#	Scunthorpe Problem
+#
+#	Innocuous strings which may be blocked by profanity filters (https://en.wikipedia.org/wiki/Scunthorpe_problem)
+
+Scunthorpe General Hospital
+Penistone Community Church
+Lightwater Country Park
+Jimmy Clitheroe
+Horniman Museum
+shitake mushrooms
+RomansInSussex.co.uk
+http://www.cum.qc.ca/
+Craig Cockburn, Software Specialist
+Linda Callahan
+Dr. Herman I. Libshitz
+magna cum laude
+Super Bowl XXX
+medieval erection of parapets
+evaluate
+mocha
+expression
+Arsenal canal
+classic
+Tyson Gay
+Diars now. We're trying a new technique. We don't know where this message will end up in your dream, but we hope it works. Please wake up, we miss you.
+
+#	Terminal escape codes
+#
+#	Strings which punish the fools who use cat/type on this file
+
+Roses are [0;31mred[0m, violets are [0;34mblue. Hope you enjoy terminal hue
+But now...[20Cfor my greatest trick...[8m
+The quick brown fox... [Beeeep]
+
+#	iOS Vulnerabilities
+#
+#	Strings which crashed iMessage in various versions of iOS
+
+Powerلُلُصّبُلُلصّبُررً ॣ ॣh ॣ ॣ冗
+🏳0🌈️
+జ్ఞ‌ా

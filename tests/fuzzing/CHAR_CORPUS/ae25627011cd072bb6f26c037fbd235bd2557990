@@ -1,0 +1,7 @@
+sÿÿÿÿ"touch /tmp/blns.fail")
+`ls -al /`
+Kernel.exec("lfail="ISO-8859-1"?><!DOCTYPE foo [ <!ELEMENT foo ANY ><!ENTITY xxe SYSTEM "file:///etc/passwd" >]><foo>&xxe;</foo>
+
+#	Unwanted Interpolation
+i
+#t	r#Sngs which can be accidentally expanded into different strings if evaluated re reserved charin thacterse i nw 

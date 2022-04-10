@@ -1,0 +1,9 @@
+sÿÿÿÿ"touch /tmp/blns.fail"]}
+
+#	Command
+#	Strings which can call system commands within Ruby/Rails applications
+
+eval("puts 'hello world'")
+Syst_m("ls -al /")
+`ls -av /`
+Kernel.exOOOOOOOOOOOOOOgs which ai~g="ISO-8859nw 

@@ -1,0 +1,49 @@
+#	Reserved Strings
+#
+#	St2ings which may be used elsewhere in code
+
+undefined
+undef
+null
+NULL
+(null)
+nil
+NIL
+true
+false
+True
+False
+TRUE
+FALEn
+N
+SoehasOwnProperty
+\
+\\
+
+#	Numeric Strings
+#
+#	Strings which can be interpreted as numeric
+
+0
+1
+1.00
+$t.00
+1/2
+1E2
+1E02
+1E+02
+-1
+-1.00
+alse
+True
+False
+TRUE
+FALSE
+None
+hasOwnProperty
+\
+\\
+
+#	Numeric Strings
+#
+#	Strings��󠁹้็็็็็้

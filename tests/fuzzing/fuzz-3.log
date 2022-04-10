@@ -1,0 +1,32 @@
+INFO: Seed: 1343095986
+INFO: Loaded 1 modules   (7 inline 8-bit counters): 7 [0x5e8bd7, 0x5e8bde), 
+INFO: Loaded 1 PC tables (7 PCs): 7 [0x5a2a50,0x5a2ac0), 
+INFO:      995 files found in CHAR_CORPUS/
+INFO: -max_len is not provided; libFuzzer will not generate inputs larger than 4096 bytes
+INFO: seed corpus: files: 995 min: 1b max: 4096b total: 202659b rss: 28Mb
+#996	INITED cov: 5 ft: 13 corp: 9/61b exec/s: 0 rss: 95Mb
+#6162	REDUCE cov: 5 ft: 13 corp: 9/58b lim: 96 exec/s: 0 rss: 355Mb L: 6/41 MS: 1 EraseBytes-
+#6188	REDUCE cov: 5 ft: 13 corp: 9/56b lim: 96 exec/s: 0 rss: 355Mb L: 3/41 MS: 1 EraseBytes-
+AddressSanitizer:DEADLYSIGNAL
+=================================================================
+==78575==ERROR: AddressSanitizer: SEGV on unknown address 0x608000010000 (pc 0x000000552957 bp 0x7ffd0dadaa10 sp 0x7ffd0dad89c0 T0)
+==78575==The signal is caused by a READ memory access.
+    #0 0x552956 in _lou_extParseChars /home/vito/MASTER_CSI/S2/TER/fuzzing/liblouis/liblouis/compileTranslationTable.c:1405:69
+    #1 0x5522bb in LLVMFuzzerTestOneInput /home/vito/MASTER_CSI/S2/TER/fuzzing/liblouis/tests/fuzzing/fuzz_translate.c:45:7
+    #2 0x45ce51 in fuzzer::Fuzzer::ExecuteCallback(unsigned char const*, unsigned long) /local/mnt/workspace/bcain_clang_bcain-ubuntu_23113/llvm/utils/release/final/llvm.src/projects/compiler-rt/lib/fuzzer/FuzzerLoop.cpp:553:15
+    #3 0x45c695 in fuzzer::Fuzzer::RunOne(unsigned char const*, unsigned long, bool, fuzzer::InputInfo*, bool*) /local/mnt/workspace/bcain_clang_bcain-ubuntu_23113/llvm/utils/release/final/llvm.src/projects/compiler-rt/lib/fuzzer/FuzzerLoop.cpp:469:3
+    #4 0x45e937 in fuzzer::Fuzzer::MutateAndTestOne() /local/mnt/workspace/bcain_clang_bcain-ubuntu_23113/llvm/utils/release/final/llvm.src/projects/compiler-rt/lib/fuzzer/FuzzerLoop.cpp:695:19
+    #5 0x45f655 in fuzzer::Fuzzer::Loop(std::Fuzzer::vector<fuzzer::SizedFile, fuzzer::fuzzer_allocator<fuzzer::SizedFile> >&) /local/mnt/workspace/bcain_clang_bcain-ubuntu_23113/llvm/utils/release/final/llvm.src/projects/compiler-rt/lib/fuzzer/FuzzerLoop.cpp:831:5
+    #6 0x44d418 in fuzzer::FuzzerDriver(int*, char***, int (*)(unsigned char const*, unsigned long)) /local/mnt/workspace/bcain_clang_bcain-ubuntu_23113/llvm/utils/release/final/llvm.src/projects/compiler-rt/lib/fuzzer/FuzzerDriver.cpp:825:6
+    #7 0x476882 in main /local/mnt/workspace/bcain_clang_bcain-ubuntu_23113/llvm/utils/release/final/llvm.src/projects/compiler-rt/lib/fuzzer/FuzzerMain.cpp:19:10
+    #8 0x7f0027688d09 in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x26d09)
+    #9 0x421559 in _start (/home/vito/MASTER_CSI/S2/TER/fuzzing/liblouis/tests/fuzzing/fuzz_translate+0x421559)
+
+AddressSanitizer can not provide additional info.
+SUMMARY: AddressSanitizer: SEGV /home/vito/MASTER_CSI/S2/TER/fuzzing/liblouis/liblouis/compileTranslationTable.c:1405:69 in _lou_extParseChars
+==78575==ABORTING
+MS: 4 InsertRepeatedBytes-CrossOver-ChangeByte-ChangeBit-; base unit: 3c89586d99f2567d21410f29b1b2606574892aa7
+0x25,0xff,0xdf,0xdf,0xdf,0xdf,0xdf,0xdf,0xdf,0xdf,0xdf,0xdf,0xdf,0xdf,0xdf,0xdf,0xdf,0xdf,0xdf,0xff,0xff,0xff,0x24,0xff,0xff,0xdf,0xdf,0xdf,0xdf,0xdf,0xdf,0xdf,0xdf,0xdf,0xdf,0xdf,0xdf,0xab,0xdf,0xdf,0xdf,0xdf,0xdf,0xdf,0xdf,0xdf,0xdf,0xdf,0xdf,0xdf,0xdf,0xdf,0xdf,0xdf,0xdf,0xdf,0xdf,0xdf,0xdf,0xdf,0xe5,0xdf,0xdf,0xdf,0xdf,0xdf,0xdf,0xdf,0xdf,0xdf,0xdf,0xdf,0xdf,0xdf,0xdf,0xdf,0xdf,0xdf,0xdf,0xdf,0xdf,0xdf,0xdf,0xf8,0xe5,0xb,0xff,0xff,0xff,0xff,0xff,0xff,0xff,0xff,0xf9,0xfe,
+%\xff\xdf\xdf\xdf\xdf\xdf\xdf\xdf\xdf\xdf\xdf\xdf\xdf\xdf\xdf\xdf\xdf\xdf\xff\xff\xff$\xff\xff\xdf\xdf\xdf\xdf\xdf\xdf\xdf\xdf\xdf\xdf\xdf\xdf\xab\xdf\xdf\xdf\xdf\xdf\xdf\xdf\xdf\xdf\xdf\xdf\xdf\xdf\xdf\xdf\xdf\xdf\xdf\xdf\xdf\xdf\xdf\xe5\xdf\xdf\xdf\xdf\xdf\xdf\xdf\xdf\xdf\xdf\xdf\xdf\xdf\xdf\xdf\xdf\xdf\xdf\xdf\xdf\xdf\xdf\xf8\xe5\x0b\xff\xff\xff\xff\xff\xff\xff\xff\xf9\xfe
+artifact_prefix='./'; Test unit written to ./crash-6975ddc6b582068d8be6814dc39134e8efcd4eb3
+Base64: Jf/f39/f39/f39/f39/f39/f3////yT//9/f39/f39/f39/f36vf39/f39/f39/f39/f39/f39/f39/f5d/f39/f39/f39/f39/f39/f39/f39/45Qv///////////n+

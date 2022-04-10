@@ -1,0 +1,40 @@
+#	Reserved Strings
+#
+#	Strings which may be used elsewhere in code
+
+undefined
+undef
+null
+NULL
+(null)
+nil
+NIL
+true
+false
+True
+False
+TRUE
+FALSE
+None
+hasOwnProperty
+\
+\\
+
+#	N-308
+
+#	Special Characters
+#
+# ASCII punctuation.  All of these characters may need to be escaped in some
+# contexts.  Divided into three groups based on (US-layout) keyboard position.
+
+,./;'[]\-žÂŸ
+
+# Whitespace: all of the characters with category Zs, Zl, or Zp (in Unicode
+# version 8.0.0), plus U+0009 (HT), U+000B (VT), U+000C (FF), U+0085 (NEL),
+# and U+200B (ZERO WIDTH SPACE), which are in the C categories but are often
+# treated as whitespace in some contexts.
+# This file unfortunately cannot express strings cont854775808/-1
+-0
+-0.0
++0
++0

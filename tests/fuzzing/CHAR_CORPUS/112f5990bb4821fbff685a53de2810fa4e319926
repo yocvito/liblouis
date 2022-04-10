@@ -1,0 +1,133 @@
+#	Reserved Strings
+#
+#	Strings which may be used elsewhere in code
+
+undefined
+undef
+null
+NULL
+(null)
+nil
+NIL
+true
+false
+True
+False
+TRUE
+FALSE
+None
+hasOwnProperty
+\
+\\
+
+#	Numeric Strings
+#
+#	Strings which can be interpreted as numeric
+
+0
+1
+1.00
+$1.00
+1/2
+1E2
+1E02
+1E+02
+-1
+-1.00
+-$1.00
+-1/2
+-1E2
+-1E02
+-1E+02
+1/0
+0/0
+-2147483648/-1
+-9223372036854775808/-1
+-0
+-0.0
++0
++0.0
+0.00
+0..0
+.
+0.0.0
+0,00
+0,,0
+,
+0,0,0
+0.0/0
+1.0/0.0
+0.0/0.0
+1,0/0,0
+0,0/0,0
+--1
+-
+-.
+-,
+999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999
+NaN
+Infinity
+-Infinity
+INF
+1#INF
+-1#IND
+1#QNAN
+1#SNAN
+1#IND
+0x0
+0xffffffff
+0xffffffffffffffff
+0xabad1dea
+123456789012345678901234567890123456789
+1,000.00
+1 000.00
+1'000.00
+1,000,000.00
+1 000 000.00
+1'000'000.00
+1.000,00
+1 000,00
+1'000,00
+1.000.000,00
+1 000 000,00
+1'000'000,00
+01000
+08
+09
+2.2250738585072011e-308
+
+#	Special Characters
+#
+# ASCII punctuation.  All of these characters may need to be escaped in some
+# contexts.  Divided into three groups based on (US-layout) keyboard position.
+
+,./;'[]\-=
+<>?:"{}|_+
+!@#$%^
+# and U+200B (ZERO WIDTH SPACE), which are in the C categories but are often
+# treated as whitespace in some contexts.
+# This file unfortunately cannot express strings containing
+# U+0000, U+000A, or U+000D (NUL, LF, CR).
+# The next n Unicode 8.0.0).
+# The next line may appear to be blank or mojibake in some viewers.
+­؀؁؂؃؄؅؜۝܏᠎​‌‍‎‏‪‫‬‭‮⁠⁡⁢⁣⁤⁦⁧⁨⁩⁪⁫⁬⁭⁮⁯﻿￹￺￻𑂽𛲠𛲡𛲢𛲣𝅳𝅴𝅵𝅶𝅷𝅸𝅹𝅺󠀁󠀠󠀡󠀢󠀣󠀤󠀥󠀦󠀧󠀨󠀩󠀪󠀫󠀬󠀭󠀮󠀯󠀰󠀱󠀲󠀳󠀴󠀵󠀶󠀷󠀸󠀹󠀺󠀻󠀼󠀽󠀾󠀿󠁀󠁁󠁂󠁃󠁄󠁅󠁆󠁇󠁈󠁉󠁊󠁋󠁌󠁍󠁎󠁏󠁐 in some viewers.
+﻿
+￾
+
+#	Unicode Symbols
+#
+#	Strings which contain common unicode symbols (e.g. smart quotes)
+
+Ω≈ç√∫˜µ≤≥÷
+åß∂ƒ©˙∆˚¬…æ
+œ∑´®†¥¨ˆøπ“‘
+¡™£¢∞§¶•ªº–≠
+¸˛Ç◊ı˜Â¯˘¿
+ÅÍÎÏ˝ÓÔÒÚÆ☃
+Œ„´‰ˇÁ¨ˆØ∏”’
+`⁄€�perscripts; can cause rendering issues
+
+⁰⁴⁵
+₀₁₂
+⁰⁴⁵₀₁₂
+ด้้้้้็็็็็้้้้้็็็็็้้้้้้้้็็็็็้้้้้็็็็็้้้้้้้้็็็็็้้้้้็็็็็้้้้้้้้็็็็็้

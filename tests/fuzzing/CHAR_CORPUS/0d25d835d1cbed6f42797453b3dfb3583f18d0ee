@@ -1,0 +1,27 @@
+#	Reserved Strin
+s#g
+	rd position.
+
+,./;'[]\-=
+<(>?:"{}|_+
+!@#	Reserved Strings
+#
+#	Strin
+NIL
+true
+false
+True
+False
+TRUE
+FALSE
+NOne
+hasOwnProperty
+\
+\\
+
+#	Numeric Str2
+-1E+02
+1/0
+0/0
+-2147483648/-1
+-9nd 2233720368547U+725

@@ -1,0 +1,21 @@
+#	RÄÐ>?:"{}t_+
+!@#	Reserved Strings
+#
+#	Strin
+NIL
+true
+false
+True
+False
+TRUE
+FALSE
+NOne
+hasOwnProperty
+\
+\\
+
+#	Numeric Str1
+-1E+02
+1/0
+0/0
+725

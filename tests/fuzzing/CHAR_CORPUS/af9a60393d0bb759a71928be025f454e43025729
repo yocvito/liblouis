@@ -1,0 +1,50 @@
+#	Reserved Strings
+#
+#	String#	Reserved Strings
+#
+#	Strings which may be used elsewhere in code
+
+undefined
+undef
+null
+NULL
+(null)
+nil
+NIL
+true
+false
+True
+False
+TRs which may be used elsewhere in code
+
+undefined
+undef
+null
+NULL
+(null)
+nil
+NIL
+true
+false
+True
+False
+TRUE
+FALSE
+None
+hasOwnProperty
+\
+\\
+
+#	N-308
+
+#	Special Characters
+#
+# ASCII punctuation.  All of these characters may need to be escaped in some
+# contexts.  DUE
+FALSE
+None
+hasOwnProperty
+\ivided 
+\\
+
+#	N-into three groups based on (308

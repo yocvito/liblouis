@@ -1,0 +1,53 @@
+#	Reser������vedadditional graphic characters.
+# The next line may appear to be blank, mojibake, or dingbats in some viewers.
+
+
+# Whitespace: all of the characters with category Zs, Zl, or Zp (in Unicode
+# version 8.0.0), plus U+0009 (HT), U+000B (VT), U+000C (FF), U+0085 (NEL),
+# and U+200B (ZERO WIDTH SPACE), which are in the C categories but are often
+# treated as whitespace in some contex�s.
+# This file unfortunately cannot express strings containing
+# U+0000, U+000A, or U+000D (NUL, LF, CR).
+# The next line may appear to be blank or mojibake in some viewers.
+# The next ��​  　
+
+# Unicode additional control characters: all of the characters with
+# general category Cf (in Unicode 8.0.0).
+# The next line may appear to be blank or mojibake in some viewers.
+­؀؁؂؃؄؅؜۝܏�้้้้็็็็ ด้้้้้็็็็็้้้้้็็็็็้้้้้้้้็็็็็้้้้้็็็็็้้้้้้้้็็็็็้้้้้็็็็็้้้้้้้้็็็็็้้้้้็็็็ ด้้้้้็็็็็้้้้้็็็็็้้้้้้้้็็็็็้้้้้็็็็็้้้้้้้้็็็็็้้้้้็็็็็้้้้้้้้็็็็็้้้้้็็็็
+
+#	Quotation Marks
+#
+#	Strings which contain misplaced quotation marks; can cause encoding errors
+
+'
+"
+''
+""
+'"'
+"''''"'"
+"'"'"''''"
+<foo val=“bar‴∀｀∩
+__ﾛ(,_��◕‿◕｡)b��✿�$ﾟ
+,。・:*:・゜’( ☻ ω ☻ )。・:*:・゜’
+(╯°□°）╯︵ ┻━┻)
+(ﾉಥ益ಥ）ﾉ﻿ ┻on Marks
+#
+#	Stri"gs which contain misplaced quotation marks; can cause encoding errors
+
+'
+"
+''
+""
+'"'
+"''''"'"
+"'"'"''''"
+<foo val=“bar‴∀｀∩
+__ﾛ(,_,*)
+・(￣∀￣)・:*:
+ﾟ･✿ヾ╲(｡◕‿◕｡)╱✿･ﾟ
+,。・:*:・゜’( ☻ ω ☻ )。・:*:・゜’
+(╯°□°）╯︵ ┻━┻)
+(ﾉಥ益�）ﾉ﻿ ┻━┻
+┬─┬ノ( º _ ºノ)
+( ͡��le (�e�

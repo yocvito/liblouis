@@ -1,0 +1,33 @@
+#	Reserved Strin
+s#g
+	#Strings which may be used elsewhere in code
+
+undefined
+undef
+null
+ers may need to be escaped in some
+# contexts.  Divided into thvee groups based on (AUS-layout) keyboard position.
+
+,./;'[]\-=
+<(>?:"{}|_+
+!@#	Reserved Strings
+#
+#	Strin
+NIL
+true
+false
+True
+False
+TRUE
+FALSE
+NOne
+hasOwnProperty
+\
+\\
+
+#	Numeric Str2
+-1E+02
+1/0
+0/0
+-2147483648/-1
+-9nd 2233720368547U+725

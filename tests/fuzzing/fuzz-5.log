@@ -1,0 +1,19 @@
+INFO: Seed: 817776145
+INFO: Loaded 1 modules   (7 inline 8-bit counters): 7 [0x5e8bd7, 0x5e8bde), 
+INFO: Loaded 1 PC tables (7 PCs): 7 [0x5a2a50,0x5a2ac0), 
+INFO:      940 files found in CHAR_CORPUS/
+INFO: -max_len is not provided; libFuzzer will not generate inputs larger than 4096 bytes
+INFO: seed corpus: files: 940 min: 1b max: 4096b total: 202292b rss: 28Mb
+#941	INITED cov: 5 ft: 13 corp: 9/61b exec/s: 0 rss: 91Mb
+#7922	REDUCE cov: 5 ft: 13 corp: 9/59b lim: 114 exec/s: 0 rss: 367Mb L: 3/41 MS: 1 EraseBytes-
+#11827	REDUCE cov: 5 ft: 13 corp: 9/58b lim: 146 exec/s: 0 rss: 377Mb L: 2/41 MS: 5 ShuffleBytes-ChangeByte-CopyPart-ShuffleBytes-EraseBytes-
+#15291	REDUCE cov: 5 ft: 13 corp: 9/55b lim: 174 exec/s: 15291 rss: 381Mb L: 6/41 MS: 1 EraseBytes-
+#17773	REDUCE cov: 5 ft: 13 corp: 9/54b lim: 195 exec/s: 17773 rss: 382Mb L: 5/41 MS: 2 ChangeByte-EraseBytes-
+#19557	REDUCE cov: 5 ft: 13 corp: 9/53b lim: 209 exec/s: 19557 rss: 382Mb L: 4/41 MS: 4 EraseBytes-CopyPart-CopyPart-ChangeBit-
+#19631	REDUCE cov: 5 ft: 13 corp: 9/52b lim: 209 exec/s: 19631 rss: 382Mb L: 3/41 MS: 4 EraseBytes-CopyPart-InsertByte-ChangeByte-
+#20138	REDUCE cov: 5 ft: 13 corp: 9/51b lim: 209 exec/s: 20138 rss: 383Mb L: 2/41 MS: 2 EraseBytes-ChangeBit-
+#32768	pulse  cov: 5 ft: 13 corp: 9/51b lim: 330 exec/s: 10922 rss: 391Mb
+#65536	pulse  cov: 5 ft: 13 corp: 9/51b lim: 658 exec/s: 8192 rss: 424Mb
+#131072	pulse  cov: 5 ft: 13 corp: 9/51b lim: 1307 exec/s: 6241 rss: 424Mb
+#157263	REDUCE cov: 5 ft: 13 corp: 9/46b lim: 1567 exec/s: 5824 rss: 429Mb L: 36/36 MS: 2 EraseBytes-InsertByte-
+==72005== libFuzzer: run interrupted; exiting

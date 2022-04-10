@@ -1,0 +1,17 @@
+sÿÿÿÿ"touch /tmp/blns.fail"]}
+
+#	Command Injection (Ruby)
+#
+#	Strings which can call system commands "ls -al /")
+`ls -al /`
+Kernel.exec("lfail; }
+<<< %s(un='%s') = %u
++++ATH0
+
+#	MSDOS/Windows Special Filenames
+#
+#	Strings which ai~g="ISO-8859-1"?><!DOCTYPE foo [ <!ELEMENT foo ANY ><!ENTITY xxe SYSTEM "file:///etc/passwd" >]><foo>&xxe;</foo>
+
+#	Unwanted Interpolation
+i
+#t	r#Sngs which can be accidentally expanded into different strings if evaluated re reserved charin thacterse i nw 

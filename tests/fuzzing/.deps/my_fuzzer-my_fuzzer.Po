@@ -52,8 +52,7 @@ fuzzing/my_fuzzer-my_fuzzer.o: fuzzing/my_fuzzer.c ../gnulib/stdlib.h \
   /usr/include/x86_64-linux-gnu/bits/types/struct_FILE.h \
   /usr/include/x86_64-linux-gnu/bits/stdio_lim.h \
   /usr/include/x86_64-linux-gnu/bits/sys_errlist.h \
-  /usr/include/x86_64-linux-gnu/bits/stdio.h \
-  fuzzing/../../liblouis/liblouis.h
+  /usr/include/x86_64-linux-gnu/bits/stdio.h ../liblouis/liblouis.h
 
 ../gnulib/stdlib.h:
 
@@ -177,4 +176,4 @@ fuzzing/my_fuzzer-my_fuzzer.o: fuzzing/my_fuzzer.c ../gnulib/stdlib.h \
 
 /usr/include/x86_64-linux-gnu/bits/stdio.h:
 
-fuzzing/../../liblouis/liblouis.h:
+../liblouis/liblouis.h:

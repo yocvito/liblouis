@@ -619,7 +619,7 @@ typedef struct { /* translation table */
 	TranslationTableOffset forRules[HASHNUM];  /** chains of forward rules */
 	TranslationTableOffset backRules[HASHNUM]; /** Chains of backward rules */
 	TranslationTableData ruleArea[1]; /** Space for storing all rules and values */
-} TranslationTableHeader;
+}  TranslationTableHeader;
 
 typedef enum {
 	alloc_typebuf,
