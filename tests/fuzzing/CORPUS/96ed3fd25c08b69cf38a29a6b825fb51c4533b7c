@@ -1,0 +1,6 @@
+didisplay s 234
+
+letter \x280d 134
+letter \x280e 234
+
+always \x280d\x280e 234-134

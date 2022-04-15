@@ -1,0 +1,53 @@
+#include <stdlib.h>
+#include <stdint.h>
+#include <stdio.h>
+
+#include <liblouis.h>
+
+#define BUF_MAX 4096
+
+#define LANGUAGE	"en"
+
+int initialized = 0;
+
+
+
+
+static widechar inputText[BUF_MAX];
+static widechar outputText[BUF_MAX];
+static int inputLen , outputLen;
+
+static void
+__attribute__((destructor))
+free_ressources(void)
+{
+	lou_free();
+}
+
+logcallback
+avoid_log(logLevels level, const char *msg)
+{
+	(void) level;
+	(void) msg;
+}
+
+extern int LLVMFuzzerTestOneInput(const uint8_t *data, size_t size);
+
+int
+LLVMFuzzerTestOneInput(const uint8_t *data, size_t size)
+{
+	if (!initialized)
+	{
+		lou_registerLogCallback(avoid_log);
+		initialized = 1;
+	}
+
+	if (!_lou_extParseChars(data, inputText))  {
+		return -1;
+	}
+	inputLen = size;
+	static const char table_default[] = "chardefs.cti";
+	lou_translateString(table_default, inputText, &inputLen, outputText, &outputLen, NULL, NULL, ucBrl);
+
+	return 0;
+}

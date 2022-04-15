@@ -16,6 +16,7 @@ AM_CPPFLAGS = 						\
 	-DTABLESDIR=\""$(datadir)"/liblouis/tables\"	\
 	-I$(top_srcdir)/gnulib				\
 	-I$(top_builddir)/gnulib
+	-fprofile-instr-generate -fcoverage-mapping
 
 liblouis_la_LIBADD = $(top_builddir)/gnulib/libgnu.la
 

@@ -1,0 +1,96 @@
+INFO: Seed: 3634950825
+INFO: Loaded 1 modules   (7 inline 8-bit counters): 7 [0x58e27a, 0x58e281), 
+INFO: Loaded 1 PC tables (7 PCs): 7 [0x567070,0x5670e0), 
+INFO:        1 files found in CORPUS
+INFO: -max_len is not provided; libFuzzer will not generate inputs larger than 4096 bytes
+INFO: seed corpus: files: 1 min: 94b max: 94b total: 94b rss: 29Mb
+#2	INITED cov: 3 ft: 4 corp: 1/94b lim: 4 exec/s: 0 rss: 29Mb
+	NEW_FUNC[1/1]: 0x5213f0 in avoid_log /autofs/unityaccount/cremi/nmorel001/M1/TER/liblouis/tests/fuzzing/fuzz_translate.c:29
+#3	NEW    cov: 5 ft: 6 corp: 2/188b lim: 4 exec/s: 0 rss: 30Mb L: 94/94 MS: 1 ChangeByte-
+#14	NEW    cov: 5 ft: 7 corp: 3/282b lim: 4 exec/s: 0 rss: 31Mb L: 94/94 MS: 1 ChangeBinInt-
+#16	REDUCE cov: 5 ft: 7 corp: 3/237b lim: 4 exec/s: 0 rss: 31Mb L: 49/94 MS: 2 EraseBytes-InsertByte-
+#23	NEW    cov: 5 ft: 8 corp: 4/331b lim: 4 exec/s: 0 rss: 31Mb L: 94/94 MS: 2 ShuffleBytes-CMP- DE: "\x00\x00\x00\x00"-
+#34	NEW    cov: 5 ft: 9 corp: 5/425b lim: 4 exec/s: 0 rss: 32Mb L: 94/94 MS: 1 ChangeBit-
+#39	REDUCE cov: 5 ft: 9 corp: 5/411b lim: 4 exec/s: 0 rss: 32Mb L: 80/94 MS: 5 ChangeBit-ChangeByte-PersAutoDict-EraseBytes-InsertRepeatedBytes- DE: "\x00\x00\x00\x00"-
+#63	REDUCE cov: 5 ft: 9 corp: 5/394b lim: 4 exec/s: 0 rss: 33Mb L: 32/94 MS: 4 ShuffleBytes-ShuffleBytes-CrossOver-EraseBytes-
+#95	REDUCE cov: 5 ft: 9 corp: 5/374b lim: 4 exec/s: 0 rss: 34Mb L: 74/94 MS: 2 EraseBytes-ChangeBit-
+#118	REDUCE cov: 5 ft: 9 corp: 5/354b lim: 4 exec/s: 0 rss: 34Mb L: 12/94 MS: 3 PersAutoDict-EraseBytes-EraseBytes- DE: "\x00\x00\x00\x00"-
+#131	REDUCE cov: 5 ft: 9 corp: 5/314b lim: 4 exec/s: 0 rss: 35Mb L: 54/94 MS: 3 ShuffleBytes-EraseBytes-CopyPart-
+#144	REDUCE cov: 5 ft: 9 corp: 5/299b lim: 4 exec/s: 0 rss: 35Mb L: 39/94 MS: 3 ShuffleBytes-EraseBytes-ChangeBit-
+#152	REDUCE cov: 5 ft: 9 corp: 5/294b lim: 4 exec/s: 0 rss: 35Mb L: 75/94 MS: 3 CrossOver-CopyPart-EraseBytes-
+#155	REDUCE cov: 5 ft: 10 corp: 6/333b lim: 4 exec/s: 0 rss: 36Mb L: 39/94 MS: 3 ChangeBinInt-CrossOver-CMP- DE: "\xff\xff"-
+#157	NEW    cov: 5 ft: 11 corp: 7/360b lim: 4 exec/s: 0 rss: 36Mb L: 27/94 MS: 2 ShuffleBytes-EraseBytes-
+#174	REDUCE cov: 5 ft: 11 corp: 7/341b lim: 4 exec/s: 0 rss: 36Mb L: 56/94 MS: 2 ChangeASCIIInt-EraseBytes-
+#186	REDUCE cov: 5 ft: 11 corp: 7/339b lim: 4 exec/s: 0 rss: 37Mb L: 92/92 MS: 2 ShuffleBytes-CrossOver-
+#210	REDUCE cov: 5 ft: 11 corp: 7/337b lim: 4 exec/s: 0 rss: 38Mb L: 37/92 MS: 4 ChangeBinInt-CrossOver-CopyPart-CrossOver-
+#225	REDUCE cov: 5 ft: 11 corp: 7/313b lim: 4 exec/s: 0 rss: 38Mb L: 15/92 MS: 5 ChangeASCIIInt-CrossOver-CrossOver-PersAutoDict-ShuffleBytes- DE: "\xff\xff"-
+#253	REDUCE cov: 5 ft: 11 corp: 7/273b lim: 4 exec/s: 0 rss: 39Mb L: 16/92 MS: 3 ChangeByte-ChangeASCIIInt-CrossOver-
+#281	RELOAD cov: 5 ft: 13 corp: 9/371b lim: 4 exec/s: 281 rss: 41Mb
+#283	REDUCE cov: 5 ft: 13 corp: 9/367b lim: 4 exec/s: 283 rss: 41Mb L: 24/92 MS: 2 ChangeByte-EraseBytes-
+#291	REDUCE cov: 5 ft: 13 corp: 9/362b lim: 4 exec/s: 291 rss: 41Mb L: 11/92 MS: 3 ShuffleBytes-ChangeASCIIInt-CrossOver-
+#303	REDUCE cov: 5 ft: 13 corp: 9/353b lim: 4 exec/s: 303 rss: 42Mb L: 15/92 MS: 2 ChangeBit-EraseBytes-
+#308	REDUCE cov: 5 ft: 13 corp: 9/342b lim: 4 exec/s: 308 rss: 42Mb L: 1/92 MS: 5 ChangeBinInt-PersAutoDict-ChangeBinInt-ChangeBinInt-CrossOver- DE: "\x00\x00\x00\x00"-
+#313	REDUCE cov: 5 ft: 13 corp: 9/333b lim: 4 exec/s: 313 rss: 42Mb L: 61/92 MS: 5 ChangeASCIIInt-PersAutoDict-ChangeBit-ShuffleBytes-EraseBytes- DE: "\x00\x00\x00\x00"-
+#369	REDUCE cov: 5 ft: 13 corp: 9/329b lim: 4 exec/s: 369 rss: 44Mb L: 11/92 MS: 1 EraseBytes-
+#382	REDUCE cov: 5 ft: 13 corp: 9/292b lim: 4 exec/s: 382 rss: 45Mb L: 55/74 MS: 3 CopyPart-EraseBytes-PersAutoDict- DE: "\x00\x00\x00\x00"-
+#401	REDUCE cov: 5 ft: 13 corp: 9/290b lim: 4 exec/s: 401 rss: 45Mb L: 9/74 MS: 4 CopyPart-EraseBytes-EraseBytes-PersAutoDict- DE: "\xff\xff"-
+#468	REDUCE cov: 5 ft: 13 corp: 9/287b lim: 4 exec/s: 468 rss: 47Mb L: 6/74 MS: 2 CrossOver-EraseBytes-
+#487	REDUCE cov: 5 ft: 13 corp: 9/282b lim: 4 exec/s: 487 rss: 48Mb L: 1/74 MS: 4 ChangeBinInt-ChangeBinInt-EraseBytes-CrossOver-
+#524	REDUCE cov: 5 ft: 13 corp: 9/274b lim: 4 exec/s: 524 rss: 50Mb L: 19/74 MS: 2 ChangeBinInt-CrossOver-
+#544	REDUCE cov: 5 ft: 13 corp: 9/268b lim: 4 exec/s: 544 rss: 50Mb L: 9/74 MS: 5 CopyPart-CopyPart-ChangeBit-EraseBytes-InsertByte-
+#562	REDUCE cov: 5 ft: 13 corp: 9/244b lim: 4 exec/s: 562 rss: 51Mb L: 50/61 MS: 3 CopyPart-ChangeBit-EraseBytes-
+#574	REDUCE cov: 5 ft: 13 corp: 9/216b lim: 4 exec/s: 574 rss: 51Mb L: 27/61 MS: 2 ChangeASCIIInt-CrossOver-
+#586	REDUCE cov: 5 ft: 13 corp: 9/204b lim: 4 exec/s: 586 rss: 52Mb L: 38/61 MS: 2 CrossOver-ShuffleBytes-
+#594	REDUCE cov: 5 ft: 13 corp: 9/200b lim: 4 exec/s: 594 rss: 52Mb L: 15/61 MS: 3 ChangeByte-CrossOver-EraseBytes-
+#601	REDUCE cov: 5 ft: 13 corp: 9/198b lim: 4 exec/s: 601 rss: 52Mb L: 7/61 MS: 2 EraseBytes-PersAutoDict- DE: "\xff\xff"-
+#648	REDUCE cov: 5 ft: 13 corp: 9/197b lim: 4 exec/s: 648 rss: 54Mb L: 14/61 MS: 2 ShuffleBytes-EraseBytes-
+#675	REDUCE cov: 5 ft: 13 corp: 9/194b lim: 4 exec/s: 675 rss: 55Mb L: 58/58 MS: 2 ChangeByte-EraseBytes-
+#739	REDUCE cov: 5 ft: 13 corp: 9/192b lim: 4 exec/s: 369 rss: 57Mb L: 12/58 MS: 4 ChangeBinInt-ChangeBit-EraseBytes-ShuffleBytes-
+#782	REDUCE cov: 5 ft: 13 corp: 9/191b lim: 4 exec/s: 391 rss: 59Mb L: 6/58 MS: 3 CopyPart-ChangeByte-EraseBytes-
+#784	REDUCE cov: 5 ft: 13 corp: 9/190b lim: 4 exec/s: 392 rss: 59Mb L: 5/58 MS: 2 ChangeASCIIInt-EraseBytes-
+#795	REDUCE cov: 5 ft: 13 corp: 9/176b lim: 4 exec/s: 397 rss: 60Mb L: 23/58 MS: 1 EraseBytes-
+#858	REDUCE cov: 5 ft: 13 corp: 9/174b lim: 4 exec/s: 429 rss: 62Mb L: 9/58 MS: 3 EraseBytes-ShuffleBytes-CMP- DE: "\xff\xff\xff\xff\xff\xff\xff\xff"-
+#960	REDUCE cov: 5 ft: 13 corp: 9/171b lim: 4 exec/s: 480 rss: 66Mb L: 2/58 MS: 2 EraseBytes-EraseBytes-
+#964	REDUCE cov: 5 ft: 13 corp: 9/167b lim: 4 exec/s: 482 rss: 66Mb L: 54/54 MS: 4 CopyPart-ChangeASCIIInt-ChangeBit-EraseBytes-
+#1013	REDUCE cov: 5 ft: 13 corp: 9/166b lim: 4 exec/s: 506 rss: 68Mb L: 26/54 MS: 4 ChangeASCIIInt-CopyPart-EraseBytes-CopyPart-
+#1024	pulse  cov: 5 ft: 13 corp: 9/166b lim: 4 exec/s: 512 rss: 68Mb
+#1126	REDUCE cov: 5 ft: 13 corp: 9/161b lim: 4 exec/s: 563 rss: 72Mb L: 7/54 MS: 3 ChangeByte-CrossOver-ChangeByte-
+#1163	REDUCE cov: 5 ft: 13 corp: 9/160b lim: 4 exec/s: 581 rss: 74Mb L: 1/54 MS: 1 EraseBytes-
+#1194	REDUCE cov: 5 ft: 13 corp: 9/157b lim: 4 exec/s: 597 rss: 76Mb L: 23/54 MS: 1 EraseBytes-
+#1384	REDUCE cov: 5 ft: 13 corp: 9/147b lim: 4 exec/s: 692 rss: 83Mb L: 13/54 MS: 5 CopyPart-ChangeBinInt-ChangeByte-ChangeBit-EraseBytes-
+#1406	REDUCE cov: 5 ft: 13 corp: 9/133b lim: 4 exec/s: 703 rss: 84Mb L: 24/54 MS: 2 ChangeBinInt-EraseBytes-
+#1561	REDUCE cov: 5 ft: 13 corp: 9/127b lim: 4 exec/s: 780 rss: 89Mb L: 7/54 MS: 5 ShuffleBytes-PersAutoDict-ShuffleBytes-EraseBytes-ShuffleBytes- DE: "\x00\x00\x00\x00"-
+#1734	REDUCE cov: 5 ft: 13 corp: 9/115b lim: 4 exec/s: 867 rss: 96Mb L: 12/54 MS: 3 ChangeASCIIInt-ChangeBit-EraseBytes-
+#1792	REDUCE cov: 5 ft: 13 corp: 9/112b lim: 4 exec/s: 896 rss: 98Mb L: 4/54 MS: 3 CopyPart-CopyPart-EraseBytes-
+#1814	REDUCE cov: 5 ft: 13 corp: 9/111b lim: 4 exec/s: 907 rss: 99Mb L: 22/54 MS: 2 EraseBytes-InsertByte-
+#2041	REDUCE cov: 5 ft: 13 corp: 9/110b lim: 4 exec/s: 1020 rss: 107Mb L: 6/54 MS: 2 ChangeBit-EraseBytes-
+#2048	pulse  cov: 5 ft: 13 corp: 9/110b lim: 4 exec/s: 1024 rss: 107Mb
+#2070	REDUCE cov: 5 ft: 13 corp: 9/100b lim: 4 exec/s: 1035 rss: 108Mb L: 12/54 MS: 4 CopyPart-CopyPart-EraseBytes-EraseBytes-
+#2115	REDUCE cov: 5 ft: 13 corp: 9/97b lim: 4 exec/s: 705 rss: 110Mb L: 51/51 MS: 5 ChangeBinInt-CopyPart-ChangeBinInt-PersAutoDict-EraseBytes- DE: "\xff\xff"-
+#2122	REDUCE cov: 5 ft: 13 corp: 9/96b lim: 4 exec/s: 707 rss: 110Mb L: 3/51 MS: 2 ShuffleBytes-EraseBytes-
+#2158	REDUCE cov: 5 ft: 13 corp: 9/93b lim: 4 exec/s: 719 rss: 112Mb L: 48/48 MS: 1 EraseBytes-
+#2442	REDUCE cov: 5 ft: 13 corp: 9/88b lim: 4 exec/s: 814 rss: 122Mb L: 7/48 MS: 4 ShuffleBytes-ShuffleBytes-EraseBytes-CopyPart-
+#2539	REDUCE cov: 5 ft: 13 corp: 9/87b lim: 4 exec/s: 846 rss: 126Mb L: 6/48 MS: 2 ChangeByte-EraseBytes-
+AddressSanitizer:DEADLYSIGNAL
+=================================================================
+==825613==ERROR: AddressSanitizer: SEGV on unknown address 0x6040003d0000 (pc 0x000000521924 bp 0x7ffec9a3e6c0 sp 0x7ffec9a3c670 T0)
+==825613==The signal is caused by a READ memory access.
+    #0 0x521923 in _lou_extParseChars /autofs/unityaccount/cremi/nmorel001/M1/TER/liblouis/liblouis/compileTranslationTable.c:1173:2
+    #1 0x52148b in LLVMFuzzerTestOneInput /autofs/unityaccount/cremi/nmorel001/M1/TER/liblouis/tests/fuzzing/fuzz_translate.c:45:7
+    #2 0x42ee8a in fuzzer::Fuzzer::ExecuteCallback(unsigned char const*, unsigned long) (/autofs/unityaccount/cremi/nmorel001/M1/TER/liblouis/tests/fuzzing/fuzz_translate+0x42ee8a)
+    #3 0x42e425 in fuzzer::Fuzzer::RunOne(unsigned char const*, unsigned long, bool, fuzzer::InputInfo*, bool*) (/autofs/unityaccount/cremi/nmorel001/M1/TER/liblouis/tests/fuzzing/fuzz_translate+0x42e425)
+    #4 0x43016e in fuzzer::Fuzzer::MutateAndTestOne() (/autofs/unityaccount/cremi/nmorel001/M1/TER/liblouis/tests/fuzzing/fuzz_translate+0x43016e)
+    #5 0x430e45 in fuzzer::Fuzzer::Loop(std::vector<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, fuzzer::fuzzer_allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > > const&) (/autofs/unityaccount/cremi/nmorel001/M1/TER/liblouis/tests/fuzzing/fuzz_translate+0x430e45)
+    #6 0x426e70 in fuzzer::FuzzerDriver(int*, char***, int (*)(unsigned char const*, unsigned long)) (/autofs/unityaccount/cremi/nmorel001/M1/TER/liblouis/tests/fuzzing/fuzz_translate+0x426e70)
+    #7 0x44a482 in main (/autofs/unityaccount/cremi/nmorel001/M1/TER/liblouis/tests/fuzzing/fuzz_translate+0x44a482)
+    #8 0x7fac621b109a in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x2409a)
+    #9 0x420989 in _start (/autofs/unityaccount/cremi/nmorel001/M1/TER/liblouis/tests/fuzzing/fuzz_translate+0x420989)
+
+AddressSanitizer can not provide additional info.
+SUMMARY: AddressSanitizer: SEGV /autofs/unityaccount/cremi/nmorel001/M1/TER/liblouis/liblouis/compileTranslationTable.c:1173:2 in _lou_extParseChars
+==825613==ABORTING
+MS: 2 ChangeBit-ShuffleBytes-; base unit: 056d476daa8062a42ccfb056230694b733b1ede5
+0x74,0xff,0xfb,0x73,0xff,0x69,0xff,0xff,0xff,0xff,0xff,0xff,0xff,0xff,0xff,0xff,0x5,0xff,0xff,0xff,0xff,0xff,0xff,0xff,0xff,0xff,0xff,0xff,0x5,0xff,0xff,0xff,0xff,0xff,0xff,0xff,0xff,0xff,0xff,0xff,0xff,0xff,0x5,0xff,0xff,0x69,0x34,0x70,
+t\xff\xfbs\xffi\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\x05\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\x05\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\x05\xff\xffi4p
+artifact_prefix='./'; Test unit written to ./crash-d80eb824f2dee4d7272268112b0f89054b6b6d4f
+Base64: dP/7c/9p/////////////wX//////////////wX/////////////////Bf//aTRw
