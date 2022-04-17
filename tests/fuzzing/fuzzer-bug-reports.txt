@@ -1,0 +1,4 @@
+Binary: fuzz-pattern-compile
+Bug type: INFINITELOOP
+Seed: 756636065
+Description: Infinite loop in binary (timed out after 3.0 seconds)

@@ -7,7 +7,10 @@
 #define BUF_MAX 4096
 #define WBUF_MAX 4096*2
 
-#define LANGUAGE	"en"
+#define LANGUAGE	getenv("LANG")
+
+char * envvar = "LANG";
+
 
 
 static widechar inputText[BUF_MAX] , output1Text[BUF_MAX];
