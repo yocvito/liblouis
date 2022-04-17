@@ -1,0 +1,61 @@
+#	Reserved Strings
+#
+#	Strings which may be used elsewhere in code
+
+undefined
+undef
+null
+NULL
+(null)
+nil
+NIL
+true
+false
+True
+False
+TRUE
+FALSE
+None
+hasOwnProperty
+\
+\\
+
+#	Numeric Strings
+#
+#	Strings which can be interpreted as numeric
+
+0
+1
+1.00
+$1.00999999999999999
+NaN
+Infinity
+-Infinity
+INF
+1#INF
+-1#IND
+1#QNAN
+1#SNAN
+1#IND
+0x0
+0xffffffff
+0xffffffffffffffff
+0xabad1dea
+123456789012345678901234567890123456789
+1,000.00
+1 000.00
+1'000.00
+1,000,000.00
+1 000 000.00
+1'000'000.00
+1.00al Characters
+#
+# ASCII punctuation.  All of these characters may need to be escaped in some
+# contexts.  Divided into three grouyboard position.
+
+,./;'[]\-=
+<>?:"{}|_+
+!@#$%^&*()`~
+
+# Non-whitespace C0 controls: U+0001 through U+0008, U+000E through U+001F,
+��็็็้

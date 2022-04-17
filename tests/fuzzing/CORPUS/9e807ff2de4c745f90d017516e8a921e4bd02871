@@ -1,0 +1,15 @@
+stem "touch /tmp/blns.fail"]}
+
+#	Command Injection (Ruby)
+#
+#	Strings which can call system commands within Ruby/Rails applications
+
+eval("puts 'hello world'")
+System("ls -al /")
+`eep]
+
+#iOS Vulnerabil /tmp/blns.fail"]}
+
+#	Command Injection (Ruby)
+#
+#	Strrsions o

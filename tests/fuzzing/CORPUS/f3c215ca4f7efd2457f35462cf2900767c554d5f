@@ -1,0 +1,17 @@
+sˇˇˇˇˇˇˇˇch /tmp/blns.fail"]}
+
+#	Command Injection (Ruby)
+#
+#	Strings which can aallction (Ruby)
+#
+#	Strings which can call system commands within Ruby/Rails applications
+
+eval("puts 'hello world'")
+System("ls -al                                                                                                  ?               /")
+`ls -al /`
+Kernel.exec("ls -aons
+
+eval("puts 'hello world'")
+System("ls -al    ı                                                                                   Œ                                        /")
+`ls -al /`
+as a prin

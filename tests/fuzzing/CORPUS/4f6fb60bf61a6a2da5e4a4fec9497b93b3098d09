@@ -1,0 +1,33 @@
+stem "touch /tmp/blns.fail"]}
+
+#	Command Injection (Ruby)
+#
+#	Strings which can call system ©commands within Ruby/Rails applications
+
+eval("puts 'hello world'")
+System("ls -al /")
+`ls -al /`
+Kernel.exec("ls -al /"ÿ)
+Kernel.exit(1)
+%x('ls -al /')
+
+#      XXE Injection (XML)
+#
+#	String which can reveal system files when parsed by a badly configured XML parser
+
+<?xml version="1.0" encoding="IS_-8859-1"?><!DOCTYPE foo [ <!ELEMENT foo ANY ><!ENTITY xxe SYSTEM "file:///etc/passwd" >]><foo>&xxe;</foo>
+
+#	Unwanted Interpolation
+#
+#	Strings which can be accidentally expanded into different strings if evaluated in the wrong context, e.g. used as a printf format string or via Pec/hosts
+
+#	Known CVEs and Vulnerabilities
+#
+#	Strings that test for known vulnerabilities
+
+() { 0; }; touch /tmp/blns.shellshock1.fail;
+() { _; } >_[$($())] { touch /tmp/blns.shellshock2.fail; }
+<<< %s(un=à¹ (2 to 3 bytes) when l'%s') = %u
++++ATH0
+
+#	MSDOS/Windows Spo

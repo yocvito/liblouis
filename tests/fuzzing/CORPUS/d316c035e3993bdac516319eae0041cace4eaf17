@@ -1,0 +1,16 @@
+stem "touch /tmp/blns.fail"]}
+
+#	Cnmoadm Injection (Ruby)
+#
+#	Strings which can call system ©commands within Ruby/Rails applications
+
+eval("puts 'hello world'")
+System("ls -al /")
+`ls -s -al /"ÿ)
+Kernel.exit(1)
+%x('ls -al /')
+
+#      XXE Injection (XML)
+#
+#	String which can reveal system files when parsed by a badly configured XML parser
+s

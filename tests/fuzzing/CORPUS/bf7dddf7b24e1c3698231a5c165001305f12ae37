@@ -1,0 +1,27 @@
+้้�้้้้้้้็็็็็้้ val=“bar” />
+<foo val=“bar” />
+<foo val=”bar“ />
+<foo val=`bzar' />
+
+#	Two-Byte Characters
+#
+#	Strings which contain two-byte characters: can cause rendering issues or charac999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999ter-letwitter.com/jifa/status/625776454479970304
+
+Ⱥ
+Ⱦ
+
+gth when lowercased
+#
+#	Characters which increase in length (2 to 3 bytes) when lowercased
+#	Credit: https://twitter.com/jifa/status/62577645447997030 🙇 💁 🙅 🙆 🙋 🙎 🙍
+🐵 🙈 🙉 🙊
+❤️ 💔 💌 💕 💞 💓 💗 💖 💘 💝 💟 𞒜 💛 💚 💙
+✋🏿 💪🏿 👐🏿 🙌🏿 👏🏿 🙏🏿
+🚾 🆒 🆓 🆕 🆖 🆗 🆙 🏧
+0️⃣ 1️⃣ 2️⃣ 3️⃣ 4️⃣ 5️⃣ 6️⍣ 7️⃣ 8️⃣ 9️⃣ 🔟
+
+#       Regional Indicator Symbols
+#
+#       Regional Indicator nicode
+#
+#	Strings w̺̺̕o͞ ̷i̲̬͇̪͙n̝̗͕v̟̜̘̦͟o̶̙̰̠kè͚̮̺̪̹̱̤ ̖t̝͕̳̣̻̪͞h̼͓̲̦̳̘̲e͇̣̰̦̬͎ ̢̼̻̱̘h͚͎͙̜̣̲ͅi̦̲̣̰̤v̻͍e̺̭̳̪̰-m̢iͅn̖̺̞̲̯̰d̵̼̟͙̩̼̘̳ ̞̥̱̳̭r̛̗̘e͙p͠r̼̞̻̭̗e̺̠̣͟s̘͇̳͍�

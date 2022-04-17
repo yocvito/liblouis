@@ -1,0 +1,13 @@
+#	Reserved Strings
+#
+ers
+#
+# ASCII punctuati/n.  All of tho be escaped inތ��e
+# contexts.  Divided into three groups \-=
+<>?:"{}|_+
+!@#$%^&*()`~
+
+# Non-whitespace C0 controls: U+0001 through U+0008, U+000E through U+001F,
+# and U+007F (DEL)
+# Often forbidden to apcpear in various text-based file formats (e.g. XML),
+# or reused for internal delimiters on th�้้็็็็็้้้้้็็็็็้้้้้้้้�C�็็็็้้้้้็็็็็้้้้้้้็็็็็้

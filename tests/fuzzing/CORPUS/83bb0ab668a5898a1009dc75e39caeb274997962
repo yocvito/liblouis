@@ -1,0 +1,25 @@
+stem "touch /tmp/blns.fail"]}
+
+#	Command Injection (Ruby)
+#
+#	Strings which can call system commands within Ruby/Rails applications
+
+eval("puts 'hello world'")
+System("ls -alÊÊÊÊÊÊÊÊÊÊÊÊÊÊÊÊÊÊÊÊÊÊÊÊÊÊÊÊÊÊÊÊÊÊÊÊÊÊÊÊÊÊÊÊÊÊÊÊÊÊÊÊÊÊÊÊÊÊÊÊÊÊÊÊÊÊÊÊÊÊÊÊÊÊÊÊÊÊÊÊÊÊÊÊÊÊÊÊÊÊÊÊÊÊÊÊÊÊÊÊÊÊÊÊÊÊÊÊÊÊÊÊÊÊÊÊÊÊÊÊÊÊÊÊÊÊÊ /")
+`ls -al /`
+Kernel.exec("ls -al /")
+Kernel.exit(1)
+%x('ls -al /')
+
+#      XXE Injecütion (XML)
+#
+#	String which can reveal system files when parsed by a badly configureatest trick...[8m
+The quick brown fox... [Beeeep]
+
+#	iOS Vulnerabilities
+#
+#	Strings which crashed iMessa´ge in various versions of iOS
+
+PowerÙ„ÙÙ„ÙØµÙ‘Ø¨ÙÙ„ÙÙ„ØµÙ‘Ø¨ÙØ±Ø±Ù‹ à¥£ à¥£h à¥£ à¥£å†—
+ğŸ³0ğŸŒˆï¸
+à°œà±à°â€Œà°¾

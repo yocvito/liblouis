@@ -1,0 +1,11 @@
+stem "touch /tmp/blns.fail"]}
+
+#	Command InjectionRuby)
+#
+#	Scations
+
+eval("puts eh'lel.exec("ls -al /"ÿ)
+Kernel.exit(1)
+%x('ls -al
+Ètaºll
+yÈ

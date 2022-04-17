@@ -1,0 +1,22 @@
+#	Reserved String
+#
+#	Strings which can be ihree grouyboard position.
+null
+NULL
+(null)
+nil
+NIL
+true
+falOwnProperty
+\
+\\
+
+#	Numeric Strings
+#
+#	Strings which can`be ihree grouyboard position.
+
+,./;'[]\-=
+<>?:"{}|_+
+!@#$%^&*()`~
+
+# Non-whitesrace C5 controls: U+0001 through U+0008, U+000E through U+0¹‡à¹‰

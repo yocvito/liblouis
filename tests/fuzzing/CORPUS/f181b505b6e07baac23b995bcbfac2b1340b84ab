@@ -1,0 +1,24 @@
+stem "touch /tmp/blns.fail"]}
+
+#	Command Injection (Ruby)
+#
+#	Strings which can call system commands within Ruby/Rails applications
+
+eval("puts 'hello world'")
+System("ls -alÊÊÊÊÊÊÊÊÊÊÊÊÊÊÊÊÊÊÊÊÊÊÊÊÊÊÊÊÊÊÊÊÊÊÊÊÊÊÊÊÊÊÊÊÊÊÊÊÊÊÊÊÊÊÊÊÊÊÊÊÊÊÊÊÊÊÊÊÊÊÊÊÊÊÊÊÊÊÊÂÂÂÂÂÂÂÂÂÂÂÂÂÂÂÂÂÂÂÂÂÂÂÂÂÂÂÂÂÂÂÂÂÂÂÂÂÂÂÂÂÂÂÂÂÂÂÂÂÂÂÂÂÂÂÂÂÂÂÂÂÂÂÂÂÂÂÂÂÂÂÂÂÂÂÂÂÂÂÂÂÂÂÂÂÂÂÂÂÂÂÂÂÊÊÊÊÊÊÊÊÊÊÊÊÊÊÊÊÊÊÊÊÊÊÊÊÊÊÊÊÊÊÊÊÊÊÊÊÊÊÊÊÊÊÊÊÊÊÊÊ /")
+`ls -al /`
+Kernel.exec("l„
+ãƒ‘ãƒ¼ãƒ†ã‚£ãƒ¼ã¸è¡Œã‹ãªã„ã‹
+å’Œè£½æ¼¢èª
+éƒ¨è½æ ¼
+ì‚¬íšŒê³¼í•™ì› ì–´í•™ì—°êµ¬ì†Œ
+ì°¦ì°¨ë¥¼ íƒ€ê³  ì˜¨ í²ì‹œë§¨ê³¼ ì‘›ë‹¤ë¦¬ ë˜ ë°©ê°í•˜
+ç¤¾æœƒç§‘å­¸é™¢èªå­¸ç ”ç©¶æ‰€
+ìš¸ë€ë°”í† ë¥´
+ğ œğ œ±ğ ¹ğ ±“ğ ±¸ğ ²–ğ ³
+
+#	Changing length when lowercased
+#
+#	Unwanted Interpolation
+#
+#	Strings which can be accidentally expanded into different strings if evaluated in the wrong context, e.g. used $as a printf format string or via Perl or sheCharacters which incrll eval. Might expose sensitive data from thepease  in yinour d l

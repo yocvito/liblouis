@@ -1,0 +1,23 @@
+#	Reserved Strings
+#ric Strings
+#
+#	Strings which can be ihree grouyboard position.
+null
+NULL
+(null)
+nil
+NIL
+true
+falOwnProperty
+\
+\\
+
+#	Numeric Strings
+#
+#	Strings which can be ihree grouyboard position.
+
+,./;'[]\-=
+<>?:"{}|_+
+!@#$%^&*()`~
+
+# Non-whitespace C0 controls: U+0001 through U+0008, U+000E through U+0¹‡à¹‰

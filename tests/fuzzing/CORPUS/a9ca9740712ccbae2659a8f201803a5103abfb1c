@@ -1,0 +1,18 @@
+stem "touch /tmp/blns.fail"]}
+
+#	Command Injection (Ruby)
+#
+#	Strings which can call system �commands within Ruby/Rails applications
+
+eval("puts 'hello world'")
+System("ls -al /")
+`ls -al /`
+Kernel.exec("ls -al /"�)
+Kernel.exit(1)
+%x('1s -al /')
+
+#      XXE Injection (XML)
+#
+#	String which can reveal system filespecific strings
+#้้้้็็็็ ด้�
+#   Strings that m_y occur on

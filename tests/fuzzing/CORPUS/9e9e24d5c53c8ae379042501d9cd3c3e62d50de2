@@ -1,0 +1,14 @@
+sˇˇˇˇˇˇˇˇch /tmp/blns.fail"]}
+
+#	Command Injection (Ruby)
+#
+
+eval("puts 'hello world'")
+System("ls -al                                                                                                  ?               /")
+`ls -al /`
+Kernel.exec("ls -aons
+
+eval("puts 'hello world'")
+System("ls -al    ı                                                ;                                   Œ                            ¬           /")
+`ls -al /`
+as a prin

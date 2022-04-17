@@ -1,0 +1,6 @@
+stem "touch /tmp/blns.fail"]}
+
+#	Command Injection (Ruby)
+#
+#	Strings w=ich can call system comm iwdtasnhin Ruby/Rails alo t'")
+Sys o

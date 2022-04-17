@@ -1,0 +1,8 @@
+stem "touch /tmp/blns.fail"]}
+
+#	Command Injection (Ruby)
+#
+#	Strings w=ich can call system commands within Ruby/Rails app4lications
+
+eval("puts 'hello t'")
+Sys o

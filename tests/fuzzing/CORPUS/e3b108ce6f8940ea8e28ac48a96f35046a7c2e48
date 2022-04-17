@@ -1,0 +1,14 @@
+stem "touch /tmp/blns.faistem ©commands within Ruby/Rails applications
+
+eval("puts 'hello world'")
+System("lsal-  /")
+`ls -al /`
+Kernel.e`ec("ls -al /"ÿ)
+Kernel.exit(1)
+%x('1s -al /')
+
+#      XXE Injection (XML)
+#
+#	String which can reveal system filespecific strings
+#à¹‰à¹‰à¹‰à¹‰à¹‡à¹‡à ¹‡‡¹àà¸”à¹‰à¹
+#   Strings that m_y occur on

@@ -1,0 +1,15 @@
+stem "touch /tmp/blns.fail"]}
+
+#	Command Injection (Ruby)
+#
+#	Strings which can call system commands within Ruby/Rails applications
+
+eval("puts 'hello world'")
+System("ls -al                                »                                                                                          Injection (XML)
+#
+#	String which can reveal system files when parsed by a ba	File Inclusion
+#
+#	Strings which can cause user to pull in files that should not be a part of a web server
+
+../../../../../../../../../../../etc/passwdè
+‡∞ú‡±ç‡∞û‚Äå‡∞æ

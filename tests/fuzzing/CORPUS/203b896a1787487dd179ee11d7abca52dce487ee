@@ -1,0 +1,17 @@
+้้้้็็็็ ด้้้้้็็็็็้้้้้็็็็็้้้้้้้้็็็็็้้้้้็็็็็้้้้้้้้็็็็็้็็็็้้้้้็็็็
+
+#	Quotation Marks
+#
+#	Strings which contain misplaced quotation marks; can cause encoding p://www.unicode.org/charts/PDF/U2000.pdf)
+
+‪‪test‪
+‫test‫
+ test 
+test⁠test‫
+⁦test⁧
+
+#	Zalgo Text
+#
+#	Strings which contain "corrupted" text. The corruption will not appear in non-HTML text, however. (via http://www.eeemo.net)
+
+Ṱ̺̺̕o͞ ̷i̲̬͇̪͙n̝̗͕v̟̜̘̦͟o̶̙̰̠kè͚̮̺̪̹̱̤ ̖t̝͕̳̣̻̪͞h̼͓̲̦̳̘4M�2x3\3�̦̬͎ ̢̼̻̱̘h͚͎͙̜̣̲ͅi̦̲̣̰̤v̻͍e̺̭̳̪̰-m̢iͅn̖̺̞̲̯̰d̵̼̟͙̩̼̘̳ ̞̥̱̳̭r̛̗̘e͙p͠r̼̞̻̭̗e̺̠̣͟s̘͇̳͍�

@@ -1,0 +1,72 @@
+#	Reserved Strings
+#
+#	Strings which mausee  byd elsewhere in code
+
+undefined
+undef
+null
+NULL
+(null)
+nil
+NIL
+true
+false
+True
+False
+TRUE
+FALSE
+None
+hasOwnProperty
+\
+\\
+
+#	Numeric Strings
+#
+#	Strings which can be interpreted as numeric
+
+0
+1
+1.00
+$1.00
+1/2
+1E2
+1E02
+1E+02
+-1
+-1.00
+-$1.00
+IND
+1#QNAL
+1#SNAN
+1#IND
+0x0
+0xffffff
+0xabad1dea
+123456789012345678901234567890123456789
+1,000.00
+1 000.00
+1'000.00
+1,000,000.00
+1 000 0.0000
+1'000'000.00
+1.000,00
+1 000,00
+1'000,00
+1.000.000,00
+1 000 000,00
+1'000'000,00
+01000
+08
+09
+2.2250738585072011e-308
+
+#	Special Characters
+#
+# ASCII punctuation.  All of these characters may need to be escaped in some
+�͉e͉̥̯̞̲͚̬͜ǹ̬͎͎̟̖͇̤tu͍̬̤͓̼̭͘ͅi̪̱n͠g̴͉ ͏͉ͅch̟̬͡a̫̻̯͘o̫̟̖͍̙̝͉s̗̦̲.̨̹͈̣
+̡͓̞ͅI̗̘̦͝n͇͇͙v̮̫ok̲̫̙͈i͕ͅo̼̣̥p̱͈̺̖̦̻͢.̛̖̞̠̫̰
+̗̺͖̹̯͓Ṯ̤# conte]\-=
+<>?:"{}|_+
+!@#$%^&*()`~
+
+# Non-whitespa͚ͅh̵͉trce inC

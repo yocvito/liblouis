@@ -1,0 +1,16 @@
+stem "touch /tmp/blns.fail"]}
+
+#	Command Injection (Ruby)
+#
+#	Scations
+
+eval("puts 'helel.exec("ls -al /"ÿ)
+Kernel.exit(1)
+%x('ls -al /')oo>&xxÄÃĞ™Á
+
+#	Unwanted Interpolation
+#
+#	Strings which can be acc645447id997030/en
+
+Ètaºll
+yÈ

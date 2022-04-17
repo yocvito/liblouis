@@ -1,0 +1,9 @@
+{
+    "files.associations": {
+        "internal.h": "c",
+        "stdio.h": "c",
+        "liblouis.h": "c",
+        "array": "c",
+        "string_view": "c"
+    }
+}

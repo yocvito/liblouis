@@ -1,0 +1,10 @@
+stem "touch /tmp/blns.fail"]}
+
+#	Command Injection (Ruby)
+#
+#	Strings which can call system cby/Rails applications
+
+eval("puts 'hello world'")
+System(ls" -al                                »                                                                                          Injection (XML)
+#
+#	Str nwgihichStrings which can cause user to pul∞û‚Äå‡∞æ

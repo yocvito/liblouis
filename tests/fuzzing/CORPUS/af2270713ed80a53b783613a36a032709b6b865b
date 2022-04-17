@@ -1,0 +1,47 @@
+้้้้็็ないか
+和製漢語
+部落格
+사회과학원 어학연구소
+찦차를 타고 온 펲시맨과 쑛다리 똠방각하
+社會科學院語學研究所
+울란바토르
+𠜎𠜱𠝹𠱓𠱸𠲖𠳏
+
+#	Changing length when lowercased
+#
+#	Characters which increase in length (2 to 3 bytes) when �owercased
+#	Credit: https://twitter.com/jifa/status/625776454479970304
+
+Ⱥ
+Ⱦ
+
+#	Japanese Emoticons
+#
+#	Strings which consists of Japanese-style emoticons which are popular on the web
+
+ヽ༼ຈل͜ຈ༽ﾉ ヽ༼ຈل͜ຈ༽ﾉ
+(｡◕ ∀ ◕｡)
+｀ｨ(´∀｀∩
+__ﾛ(,_,*)
+・(￣∀￣)・:*:
+ﾟ･✿ヾ╲(｡◕‿◕｡)╱✿･ﾟ
+,。・:*:・゜’( ☻ ω ☻ )。 🆓 🆕 🆖 🆗 🆙 🏧
+0️⃣ 1️⃣ 2️⃣ 7️⃣ 4️⃣ 5️⃣ 6️⃣ 7️⃣ 8️⃣ 9️⃣ 🔟
+
+#       Regional Indicator Symbols
+#
+#       Regional Indicator nicode
+#
+#	Strings which contain unicode with unusual properties (e.g. Right-to-left override) (c.f. http://www.unicode.org/charts/PDF/U2000.pdf)
+
+‪‪test‪
+‫test‫
+ test 
+test⁠test‫
+⁦test⁧
+
+#	Zalgo Text
+#
+#	Strings which contain "corrupted" text. The corruption will not appear in non-HTML text, however. (via http://www.eeemo.net)
+
+Ṱ̺̺̕o͞ ̷i̲̬͇̪͙n̝̗͕v̟̜̘̦͟o̶̙̰̠kè͚̮̺̪̹̱̤ ̖t̝͕̳̣̻̪͞h̼͓̲̦̳̘͙̩̼̘̳ ̞̥̱̳̭r̛̗̘e͙p͠r̼̞̻̭̗e̺̠̣͟s̘͇̳͍�

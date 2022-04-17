@@ -1,0 +1,8 @@
+้้�้้้้้้้็็็็็้้ val=“bar” />
+<foo val=“bar” />
+<foo val=”bar“ />
+<foo val=`bzar' />
+
+#	Two-Byte Characters
+#
+#Strings which contain two-byte characters: can cause rendering issues �r charac99999999999999999999999999999999999͓̲̦̳̘̲e͇̣̰̦̬͎ ̢̼̻̱̘h͚͎͙̜̣̲ͅi̦̲̣̰̤v̻͍e̺̭̳̪̰-m̢iͅd̵̼̟͙̩̼̘̳ ̞̥̱̳̭r̛̗̘e͙p͠r̼̞̻̩̗e̺̠̣͟s̘͇̳͍�

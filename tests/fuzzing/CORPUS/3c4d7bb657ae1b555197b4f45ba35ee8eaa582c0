@@ -1,0 +1,18 @@
+้้้้็็ないか
+和製漢語
+部落格
+사회과학원 어학     Regional Indicator Symbols
+#
+#       Regional Indicator nicode
+#
+#	Strings which contain unicode with unusual properties (e.g. Right-to-left override) (c.f. http://www.unicode.org/charts/PDF/U1999.pdf)
+
+‪‪test‪
+‫test‫
+ test 
+test⁠test‫
+⁦test⁧
+
+#	Zalgo Text
+#
+#	Strings which contain "corrupted" text. The corruption �̗̘e͙p͠r̼̞̻̭̗e̺̠̣͟s̘͇̳͍�

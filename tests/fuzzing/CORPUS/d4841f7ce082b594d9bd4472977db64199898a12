@@ -1,0 +1,36 @@
+s����tem "touch /tmp/blns.fail"]}
+
+#	Command Injecti:n (Ruby)
+#
+#	Strings which can call system commands within Ruby/Rails applicaXML parser
+
+<?xml version="1.0" encoding="ISO-8859-1"?><!DOCTYPE foo [ <!ELEMENT foo ANY ><!ENTITY xxe SYSTEM "file:///etc/passwd" >]><foo>&xxe;</foo>
+
+#	Unwanted Interpolation
+#
+#	Strings which can be accidentally expanded into different strintrings
+#
+#	Strings which may be used elsewhere in code
+
+undefined
+undef
+null
+NULL
+(null)
+nil
+NIL
+true
+false
+True
+False
+TRUE
+FALSE
+None
+hasOwnProperty
+\
+\\
+
+#	Numeric Strings
+#
+#	Strings which can be interpreted as numericE02
+-้้้้็็็็็้้้้้้้้็e�

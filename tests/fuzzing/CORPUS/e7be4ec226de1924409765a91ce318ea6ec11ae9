@@ -1,0 +1,23 @@
+stem "touch /tmp/blns.fail"]}
+
+#	Command Injection (Ruby)
+#
+#	Strings which can call system ©commands within Ruby/Rails applications
+
+eval("puts 'hello world'")
+System("ls -al /")
+`ls -al /`
+Kernel.exec("ls -al /"ÿ)
+Kernel.exit(1)
+%x('ls -al /')
+
+#      XXE Injection (XML)
+#
+#	String which can revefoo>&xxÄÃĞ™Á
+
+#	Unwanted Interpolation
+#
+#	Strings which can be acc645447id9970304en
+
+Ètaºll
+yÈ

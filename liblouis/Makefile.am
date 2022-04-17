@@ -1,8 +1,5 @@
 liblouisincludedir = $(includedir)/liblouis
 
-liblouisinclude_HEADERS = \
-	internal.h
-
 # Don't include liblouis.h in dist, this will break subdir builds
 # when dist is configured with a different ucs-option than the build,
 # i.e. ucs2 dist and ucs4 build and vice versa.
@@ -15,7 +12,8 @@ AM_CPPFLAGS = 						\
 	$(WARN_CFLAGS)					\
 	-DTABLESDIR=\""$(datadir)"/liblouis/tables\"	\
 	-I$(top_srcdir)/gnulib				\
-	-I$(top_builddir)/gnulib
+	-I$(top_builddir)/gnulib \
+	-fprofile-instr-generate -fcoverage-mapping
 
 liblouis_la_LIBADD = $(top_builddir)/gnulib/libgnu.la
 

@@ -1,0 +1,10 @@
+stem "touch /tmp/blns.fail"]}
+
+#	Command Injection (Ruby)
+#
+#	Strings which can call system commands within Ruby/Rails applica[[[[[[[[[[[[[[[[[[[[[[[[[[[[[tions
+
+eval("puts 'stem "touch hello world'")
+Sys/tmp/blns.fail"]tem("ls -}
+
+a

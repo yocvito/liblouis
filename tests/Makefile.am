@@ -256,3 +256,17 @@ AM_TESTS_ENVIRONMENT =								\
 	PATH=$(top_builddir)/tools:$$PATH					\
 	WINE=$(WINE)								\
 	EXEEXT=$(EXEEXT)
+
+fuzzing_fuzz_translate_SOURCES = fuzzing/fuzz_translate.c
+fuzzing_fuzz_translate_LDADD =  $(top_builddir)/liblouis/liblouis.la
+fuzzing_fuzz_translate_CFLAGS= -fsanitize=address,fuzzer,undefined -O2 -fno-omit-frame-pointer -g -fsanitize-coverage=edge
+fuzzing_fuzz_translate_CFLAGS += -fprofile-instr-generate -fcoverage-mapping
+fuzzing_fuzz_translate_LDFLAGS= -fsanitize=address,fuzzer,undefined -static -lm  -fsanitize-coverage=edge ${PCAUDIOLIB_LIBS}
+
+fuzzing_fuzz_backtranslate_SOURCES = fuzzing/fuzz_backtranslate.c
+fuzzing_fuzz_backtranslate_LDADD =  $(top_builddir)/liblouis/liblouis.la
+fuzzing_fuzz_backtranslate_CFLAGS= -fsanitize=address,fuzzer,undefined -O2 -fno-omit-frame-pointer -g -fsanitize-coverage=edge
+fuzzing_fuzz_backtranslate_CFLAGS += -fprofile-instr-generate -fcoverage-mapping
+fuzzing_fuzz_backtranslate_LDFLAGS= -fsanitize=address,fuzzer,undefined -static -lm  -fsanitize-coverage=edge ${PCAUDIOLIB_LIBS}
+
+bin_PROGRAMS =  fuzzing/fuzz_backtranslate fuzzing/fuzz_translate

