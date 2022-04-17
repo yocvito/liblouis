@@ -9,9 +9,6 @@
 
 #define LANGUAGE	getenv("LANG")
 
-char * envvar = "LANG";
-
-
 
 static widechar inputText[BUF_MAX] , output1Text[BUF_MAX];
  static int inputPos[BUF_MAX], outputPos[BUF_MAX];
@@ -45,7 +42,8 @@ LLVMFuzzerTestOneInput(const uint8_t *data, size_t size)
 
 	//lou_free();
 	//std::__fs::filesystem::remove_all("/tmp/libfuzzer.uti");
-	static const char table_default[] = "en-ueb-g2.ctb";
+	static const char table_default[256];
+	sprintf(table_default,sizeof(table_default),"%s%s",getenv("LANG"),".ctb");
 	lou_translate(table_default, data, size, output1Text, &output1Len, emp1, NULL,
 				inputPos, outputPos, NULL, 0);
 
