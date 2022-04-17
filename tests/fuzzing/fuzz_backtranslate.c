@@ -27,7 +27,12 @@ int
 LLVMFuzzerTestOneInput(const uint8_t *data, size_t size)
 {
 	inputLen = size;
-	static const char table_default[] = "en-us-comp8.ctb";
+	char *table_default = getenv("FUZZ_TABLE");
+	if (table_default == NULL)
+	{
+		fprintf(stderr, "\n\n[Please set up FUZZ_TABLE env var before starting fuzzer]\n\n");
+		return -1;
+	}
 	lou_backTranslateString(table_default, data, &inputLen, outputText, &outputLen, NULL, NULL, dotsIO);
 
 	return 0;

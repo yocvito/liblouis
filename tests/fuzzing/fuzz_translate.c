@@ -10,6 +10,7 @@
 
 int initialized = 0;
 
+#define BOLDRED(x)	"\x1b[31m\x1b[1m" x "\x1b[0m"
 
 
 
@@ -46,7 +47,12 @@ LLVMFuzzerTestOneInput(const uint8_t *data, size_t size)
 		return -1;
 	}
 	inputLen = size;
-	static const char table_default[] = "chardefs.cti";
+	char *table_default = getenv("FUZZ_TABLE");
+	if (table_default == NULL)
+	{
+		fprintf(stderr, "\n" BOLDRED("[Please set up FUZZ_TABLE env var before starting fuzzer]")"\n\n");
+		exit(0);
+	}
 	lou_translateString(table_default, inputText, &inputLen, outputText, &outputLen, NULL, NULL, ucBrl);
 
 	return 0;

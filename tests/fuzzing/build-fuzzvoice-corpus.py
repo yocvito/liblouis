@@ -93,118 +93,33 @@ class Corpus:
         os.write(fd, self.dict_uni.encode('utf-8'))
         os.close(fd)
 
-        
-'''
-    Offsets class
-
-    Retrieve all the offsets of the string xx (where xx is the language) in a binary
-'''
-# class Offsets:
-   
-#     def __init__(self, lang, binary):
-#         self.pattern = lang.encode() + b'\0'
-#         self.lang = lang
-#         self.fd = os.open(binary, O_RDWR)
-#         if self.fd < 0:
-#             raise Exception("File {} doesn't exist".format(binary))
-#         self.offsets = []
-#         self.__get_offsets()
-#         os.close(self.fd)
-        
-#     '''
-#         Internal method to retrieve offsets from fuzzer binary file    
-#     '''
-#     def __get_offsets(self):
-#         size = fd_get_size(self.fd)
-#         #memsize = size + (mmap.PAGESIZE - (size % mmap.PAGESIZE))
-#         with mmap.mmap(self.fd , size, prot=mmap.PROT_READ|mmap.PROT_WRITE, flags=mmap.MAP_PRIVATE, offset=0) as mem:
-#             idx = 0
-#             bytelang = self.lang.encode() + b'\x00'
-#             while True:
-#                 idx = mem.find(bytelang, idx+1, size)
-#                 if idx < 0:
-#                     break
-#                 self.offsets.append(idx)
-                
-#     '''
-#         Get the offset list
-#     '''
-#     def getOffsets(self):
-#         return self.offsets
-
-
-'''
-    BinaryPatcher class
-    
-    Allows to patch a fuzzer binary, into multiple destination languages (could be usefull with a better args parsing)
-'''
-# class BinaryPatcher:
-     
-#     def __init__(self, fuzzbinary):
-#         self.binaryname = fuzzbinary
-#         if fuzzbinary[3:] != DEFAULT_BINARY_NAME:
-#             raise Exception("fuzzing binary model name doesn't respect requested format")
-#         self.offsets = Offsets(fuzzbinary[:2], fuzzbinary)
-        
-#     def patch(self, language):
-#         self.patch(language, language + '_' + DEFAULT_BINARY_NAME)
-        
-#     def patch(self, language, filename):
-#         path = shutil.copy(self.binaryname, filename)
-#         fd = os.open(path, O_RDWR)
-#         if fd < 0:
-#             raise Exception('Cannot achieved to open file ' + path)
-#         size = fd_get_size(fd)
-#         #memsize = size + (mmap.PAGESIZE - (size % mmap.PAGESIZE))
-#         with mmap.mmap(fd, size, prot=mmap.PROT_READ|mmap.PROT_WRITE, offset = 0) as mm:
-#             for off in self.offsets.getOffsets():
-#                 self.__patch(mm, language, off)
-    
-#     def __patch(self, mm, language, offset):
-#         mm.seek(offset, SEEK_SET)
-#         mm.write(language.encode())
-
 def main(argc, argv):
     if argc < 3:
-        print('Build corpus file(s) and voice fuzzer for a specified language.')
-     #   print('Usage: {} <filename> <fuzzer-binary-model>'.format(argv[0]), file=sys.stderr)
-        print('  filename               --  the filename of the dictsource/xx_list file')
-        print('                             (The language will be extracted from this filename so respect format: xx_list)')
-        print('  fuzzer-binary-model    --  the fuzzer binary (not source) for a language to be used as an example')
-        print('                             (format: xx_fuzz_voice)')
-        print('\nPLEASE Modify Corpus class if this script stop working after modifying fuzzer source code')
+        print('Summary: Build corpus from files', file=sys.stderr)
+        print(f'Usage: {argv[0]} -f <file(s)> -o <output-filename>', file=sys.stderr)
         exit(1)
 
     ap = argparse.ArgumentParser()
 
     # Add the arguments to the parser
     ap.add_argument("-f", "--files", required=True,
-    help="the filenames list of the dictsource/xx_list files")
-   # ap.add_argument("-b", "--fuzz_binary", required=False,
-  #  help="the fuzzer binary (not source) for a language to be used as an example")
-    ap.add_argument("-l", "--language", required=True,
-    help="the language of the created corpus and fuzzer binary")
+    help="the filenames list to extract char from and build corpus")
+    ap.add_argument("-o", "--output", required=True,
+    help="the output filename for the corpus file. If size exceed 4096, corpus is splited into files called <your-filename>-N.<your-ext> (extension is automatically extracted)")
     args = vars(ap.parse_args())
 
     files = []
     for file in args['files'].split(','):
         if file == '':
             print('Error in --files format', file=sys.stderr)
+            print('Format is : --files=file0,file1,file2', file=sys.stderr)
             exit(1)
         files.append(file)
-
-    lang = args['language']
-    #binexample = args['fuzz_binary']
     
-    c = Corpus(files, lang + '_corpus.txt')
+    c = Corpus(files, args['output'])
     c.retrieveDict()
     c.writeDictToFile()
-    
-    # if args['fuzz_binary'] is not None:
-    #     bp = BinaryPatcher(binexample)
-    #     bp.patch(lang, lang + '_fuzz_voice')
-    
-    
+
 
 if __name__ == "__main__":
     main(len(sys.argv), sys.argv)
