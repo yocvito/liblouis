@@ -7,13 +7,11 @@ import shutil
 import os
 from os import O_RDONLY, O_RDWR, O_WRONLY, O_TRUNC, O_CREAT, SEEK_END, SEEK_CUR, SEEK_SET
 
+import subprocess as sp
 
-
-'''from pwn import *
-context.quiet'''
-
-DEFAULT_BINARY_NAME = 'fuzz_voice'
 DEFAULT_CORPUS_NAME = 'corpus.txt'
+FUZZ_MAXLEN = 4096
+
 
 def fd_get_size(fd):
     cur_off = os.lseek(fd, 0, SEEK_CUR)
@@ -32,7 +30,7 @@ def isUnicode(s):
     if (not isAscii(s[0])) and (not isAscii(s[1])): 
         try:
             c=ord(s.decode('utf-8'))
-            if (c > 0 and c < 0xffff) or (c > 0xe000 and c < 0x10ffff):
+            if (c > 0 and c < 0x10ffff):
                 return c, True
         except:
             pass
@@ -64,12 +62,24 @@ class Corpus:
     '''
     def retrieveDict(self):
         for filename in self.files:
+            print(f'Fetching characters in {filename}')
             with open(filename, mode='rb') as fp:
                 for line in fp.readlines():
                     for i in range(0, len(line)):
-                        
-                        if i != 0:
-                            s = line[i-1: i+1] 
+                        if i >= 3:
+                            s = line[i-3: i+1] 
+                            c, ret = isUnicode(s)
+                            if ret == True and self.unicode_lut[c] is False:
+                                self.unicode_lut[c] = True
+                                self.dict_uni += chr(c)
+                        if i >= 2:
+                            s = line[i-2: i+1] 
+                            c, ret = isUnicode(s)
+                            if ret == True and self.unicode_lut[c] is False:
+                                self.unicode_lut[c] = True
+                                self.dict_uni += chr(c)
+                        if i > 0:
+                            s = line[i-1: i+1]
                             c, ret = isUnicode(s)
                             if ret == True and self.unicode_lut[c] is False:
                                 self.unicode_lut[c] = True
@@ -105,7 +115,7 @@ def main(argc, argv):
     ap.add_argument("-f", "--files", required=True,
     help="the filenames list to extract char from and build corpus")
     ap.add_argument("-o", "--output", required=True,
-    help="the output filename for the corpus file. If size exceed 4096, corpus is splited into files called <your-filename>-N.<your-ext> (extension is automatically extracted)")
+    help="the output filename for the corpus file")
     args = vars(ap.parse_args())
 
     files = []
