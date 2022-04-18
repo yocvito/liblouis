@@ -24,8 +24,7 @@ LLVMFuzzerInitialize(const int *argc, char ***argv)
 
 
 int
-LLVMFuzzerTestOneInput(const uint8_t *data, size_t size)
-{
+LLVMFuzzerTestOneInput(const uint8_t *data, size_t size) {
 	inputLen = size;
 	char *table_default = getenv("FUZZ_TABLE");
 	if (table_default == NULL)
