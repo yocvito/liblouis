@@ -8,6 +8,10 @@ AM_CPPFLAGS =					\
 	-I$(top_builddir)/gnulib		\
 	-I$(top_builddir)/tools
 
+if USE_COVERAGE
+AM_CPPFLAGS += -fprofile-instr-generate -fcoverage-mapping
+endif
+
 LDADD =							\
 	$(top_builddir)/liblouis/liblouis.la		\
 	$(top_builddir)/gnulib/libgnu.la		\
@@ -293,8 +297,8 @@ AM_TESTS_ENVIRONMENT =								\
 	WINE=$(WINE)								\
 	EXEEXT=$(EXEEXT)
 
-fuzzing_my_fuzzer_SOURCES = fuzzing/my_fuzzer.c
-bin_PROGRAMS =  fuzzing/my_fuzzer
-fuzzing_my_fuzzer_LDADD =  $(top_builddir)/liblouis/liblouis.la
-fuzzing_my_fuzzer_CFLAGS= -fsanitize=address,fuzzer -O2 -fno-omit-frame-pointer -g -fsanitize-coverage=edge $(AM_CPPFLAGS)
-fuzzing_my_fuzzer_LDFLAGS= -fsanitize=address,fuzzer -static -lm  -fsanitize-coverage=edge ${PCAUDIOLIB_LIBS}
+fuzzing_fuzz_translate_SOURCES = fuzzing/fuzz_translate.c
+bin_PROGRAMS =  fuzzing/fuzz_translate
+fuzzing_fuzz_translate_LDADD =  $(top_builddir)/liblouis/liblouis.la
+fuzzing_fuzz_translate_CFLAGS = -fsanitize=address,fuzzer,undefined -O2 -fno-omit-frame-pointer -g -fsanitize-coverage=edge $(AM_CPPFLAGS)
+fuzzing_fuzz_translate_LDFLAGS = -static -lm ${PCAUDIOLIB_LIBS}

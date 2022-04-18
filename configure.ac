@@ -32,6 +32,11 @@ AC_ARG_WITH([yaml],
   [with_yaml=$withval],
   [])
 
+# Check if the user wants to enable coverage
+AC_ARG_WITH([clang-coverage],
+    [AS_HELP_STRING([--with-coverage], [enable clang coverage in the fuzzer tests (also add coverage to lib sources) @<:@default=no@:>@])],
+    [])
+
 # Checks for libraries.
 if test "x$with_yaml" == xno; then
   AC_DEFINE([WITHOUT_YAML],[1],[Disable YAML tests])
@@ -49,6 +54,14 @@ if test x$ac_cv_lib_yaml_yaml_parser_initialize != xyes; then
   *) AC_MSG_WARN([libyaml was not found. YAML tests will be skipped]);;
   esac
 fi
+
+# Check for coverage 
+if test "$with_coverage" = "yes" ; then
+	use_coverage=yes
+else
+	use_coverage=no
+fi
+AM_CONDITIONAL(USE_COVERAGE, [test x"$use_coverage" = xyes])
 
 # Checks for header files.
 AC_HEADER_STDC

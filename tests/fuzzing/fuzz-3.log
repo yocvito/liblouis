@@ -1,0 +1,53 @@
+INFO: Seed: 1028201435
+INFO: Loaded 1 modules   (8 inline 8-bit counters): 8 [0x5e8c6f, 0x5e8c77), 
+INFO: Loaded 1 PC tables (8 PCs): 8 [0x5a2b50,0x5a2bd0), 
+INFO: -max_len is not provided; libFuzzer will not generate inputs larger than 4096 bytes
+INFO: A corpus is not provided, starting from an empty corpus
+#2	INITED cov: 3 ft: 4 corp: 1/1b exec/s: 0 rss: 27Mb
+	NEW_FUNC[1/1]: 0x552220 in avoid_log /home/vito/MASTER_CSI/S2/TER/fuzzing/liblouis/tests/fuzzing/fuzz_translate.c:26
+#3	NEW    cov: 4 ft: 5 corp: 2/2b lim: 4 exec/s: 0 rss: 28Mb L: 1/1 MS: 1 ChangeBinInt-
+#24	NEW    cov: 4 ft: 6 corp: 3/4b lim: 4 exec/s: 0 rss: 29Mb L: 2/2 MS: 1 InsertByte-
+#46	NEW    cov: 5 ft: 7 corp: 4/5b lim: 4 exec/s: 0 rss: 29Mb L: 1/2 MS: 2 ChangeByte-ChangeBit-
+#76	NEW    cov: 5 ft: 8 corp: 5/9b lim: 4 exec/s: 0 rss: 30Mb L: 4/4 MS: 5 CrossOver-ChangeBinInt-ChangeBit-CrossOver-ChangeBinInt-
+#77	NEW    cov: 5 ft: 9 corp: 6/13b lim: 4 exec/s: 0 rss: 30Mb L: 4/4 MS: 1 CopyPart-
+#146	NEW    cov: 5 ft: 10 corp: 7/17b lim: 4 exec/s: 0 rss: 31Mb L: 4/4 MS: 4 CrossOver-CrossOver-ChangeBit-ChangeBinInt-
+#180	REDUCE cov: 5 ft: 10 corp: 7/16b lim: 4 exec/s: 0 rss: 31Mb L: 3/4 MS: 4 CopyPart-ChangeByte-ChangeBit-EraseBytes-
+#221	REDUCE cov: 5 ft: 10 corp: 7/15b lim: 4 exec/s: 0 rss: 32Mb L: 3/4 MS: 1 EraseBytes-
+#251	REDUCE cov: 5 ft: 10 corp: 7/14b lim: 4 exec/s: 0 rss: 32Mb L: 3/3 MS: 5 EraseBytes-ChangeByte-ChangeBit-ShuffleBytes-CopyPart-
+#323	REDUCE cov: 5 ft: 10 corp: 7/13b lim: 4 exec/s: 0 rss: 34Mb L: 2/3 MS: 2 ChangeBinInt-EraseBytes-
+#373	REDUCE cov: 5 ft: 10 corp: 7/12b lim: 4 exec/s: 0 rss: 34Mb L: 2/3 MS: 5 CrossOver-ShuffleBytes-ChangeBinInt-EraseBytes-EraseBytes-
+#441	REDUCE cov: 5 ft: 10 corp: 7/11b lim: 4 exec/s: 0 rss: 35Mb L: 1/3 MS: 3 CopyPart-CrossOver-CrossOver-
+#573	REDUCE cov: 5 ft: 10 corp: 7/10b lim: 4 exec/s: 0 rss: 37Mb L: 1/3 MS: 2 CopyPart-CrossOver-
+#794	REDUCE cov: 5 ft: 11 corp: 8/16b lim: 6 exec/s: 0 rss: 41Mb L: 6/6 MS: 1 CrossOver-
+#947	REDUCE cov: 5 ft: 11 corp: 8/15b lim: 6 exec/s: 0 rss: 43Mb L: 5/5 MS: 3 ShuffleBytes-ShuffleBytes-EraseBytes-
+#1270	REDUCE cov: 5 ft: 11 corp: 8/14b lim: 8 exec/s: 0 rss: 49Mb L: 1/5 MS: 3 ChangeBinInt-ChangeBit-CrossOver-
+#1904	REDUCE cov: 5 ft: 12 corp: 9/28b lim: 14 exec/s: 0 rss: 58Mb L: 14/14 MS: 4 CopyPart-CMP-CrossOver-CrossOver- DE: "\x00\x00"-
+#3791	REDUCE cov: 5 ft: 12 corp: 9/27b lim: 29 exec/s: 0 rss: 87Mb L: 13/13 MS: 2 CopyPart-EraseBytes-
+#5288	REDUCE cov: 5 ft: 12 corp: 9/26b lim: 43 exec/s: 0 rss: 111Mb L: 12/12 MS: 2 ShuffleBytes-CrossOver-
+#5913	REDUCE cov: 5 ft: 13 corp: 10/73b lim: 48 exec/s: 0 rss: 120Mb L: 47/47 MS: 5 ShuffleBytes-CopyPart-ShuffleBytes-ShuffleBytes-InsertRepeatedBytes-
+#6152	REDUCE cov: 5 ft: 13 corp: 10/72b lim: 48 exec/s: 0 rss: 124Mb L: 46/46 MS: 4 ChangeByte-InsertByte-ChangeBit-CrossOver-
+#6258	REDUCE cov: 5 ft: 13 corp: 10/71b lim: 48 exec/s: 0 rss: 126Mb L: 11/46 MS: 1 EraseBytes-
+#6344	REDUCE cov: 5 ft: 13 corp: 10/70b lim: 48 exec/s: 0 rss: 128Mb L: 45/45 MS: 1 EraseBytes-
+AddressSanitizer:DEADLYSIGNAL
+=================================================================
+==31877==ERROR: AddressSanitizer: SEGV on unknown address 0x604000530000 (pc 0x0000005529b7 bp 0x7ffd8a4f3c60 sp 0x7ffd8a4f1c20 T0)
+==31877==The signal is caused by a READ memory access.
+    #0 0x5529b6 in _lou_extParseChars /home/vito/MASTER_CSI/S2/TER/fuzzing/liblouis/liblouis/compileTranslationTable.c:1405:69
+    #1 0x5522b8 in LLVMFuzzerTestOneInput /home/vito/MASTER_CSI/S2/TER/fuzzing/liblouis/tests/fuzzing/fuzz_translate.c:42:7
+    #2 0x45ce51 in fuzzer::Fuzzer::ExecuteCallback(unsigned char const*, unsigned long) /local/mnt/workspace/bcain_clang_bcain-ubuntu_23113/llvm/utils/release/final/llvm.src/projects/compiler-rt/lib/fuzzer/FuzzerLoop.cpp:553:15
+    #3 0x45c695 in fuzzer::Fuzzer::RunOne(unsigned char const*, unsigned long, bool, fuzzer::InputInfo*, bool*) /local/mnt/workspace/bcain_clang_bcain-ubuntu_23113/llvm/utils/release/final/llvm.src/projects/compiler-rt/lib/fuzzer/FuzzerLoop.cpp:469:3
+    #4 0x45e937 in fuzzer::Fuzzer::MutateAndTestOne() /local/mnt/workspace/bcain_clang_bcain-ubuntu_23113/llvm/utils/release/final/llvm.src/projects/compiler-rt/lib/fuzzer/FuzzerLoop.cpp:695:19
+    #5 0x45f655 in fuzzer::Fuzzer::Loop(std::Fuzzer::vector<fuzzer::SizedFile, fuzzer::fuzzer_allocator<fuzzer::SizedFile> >&) /local/mnt/workspace/bcain_clang_bcain-ubuntu_23113/llvm/utils/release/final/llvm.src/projects/compiler-rt/lib/fuzzer/FuzzerLoop.cpp:831:5
+    #6 0x44d418 in fuzzer::FuzzerDriver(int*, char***, int (*)(unsigned char const*, unsigned long)) /local/mnt/workspace/bcain_clang_bcain-ubuntu_23113/llvm/utils/release/final/llvm.src/projects/compiler-rt/lib/fuzzer/FuzzerDriver.cpp:825:6
+    #7 0x476882 in main /local/mnt/workspace/bcain_clang_bcain-ubuntu_23113/llvm/utils/release/final/llvm.src/projects/compiler-rt/lib/fuzzer/FuzzerMain.cpp:19:10
+    #8 0x7f165e0d4d09 in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x26d09)
+    #9 0x421559 in _start (/home/vito/MASTER_CSI/S2/TER/fuzzing/liblouis/tests/fuzzing/fuzz_translate+0x421559)
+
+AddressSanitizer can not provide additional info.
+SUMMARY: AddressSanitizer: SEGV /home/vito/MASTER_CSI/S2/TER/fuzzing/liblouis/liblouis/compileTranslationTable.c:1405:69 in _lou_extParseChars
+==31877==ABORTING
+MS: 3 InsertRepeatedBytes-CrossOver-ChangeBinInt-; base unit: 8ce24fc0ea8e685eb23bf6346713ad9fef920425
+0xff,0x40,0x40,0x40,0x40,0x40,0x40,0x40,0x40,0x40,0x40,0x40,0x40,0xff,0xff,0xf5,0xff,0xff,0xff,0xff,0xff,0xff,0xff,0xff,0xff,0xff,0xff,0xff,0xff,0xff,0xff,0xff,0xff,0xff,0xff,0xff,0xff,0xff,0xff,0xff,0xff,0xff,0xff,0xff,0xff,0xff,0xff,0xff,
+\xff@@@@@@@@@@@@\xff\xff\xf5\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff
+artifact_prefix='./'; Test unit written to ./crash-66025ae807ec061f10883c4cdc257c8f609ad234
+Base64: /0BAQEBAQEBAQEBAQP//9f//////////////////////////////////////////
