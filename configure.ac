@@ -33,7 +33,7 @@ AC_ARG_WITH([yaml],
   [])
 
 # Check if the user wants to enable coverage
-AC_ARG_WITH([clang-coverage],
+AC_ARG_WITH([coverage],
     [AS_HELP_STRING([--with-coverage], [enable clang coverage in the fuzzer tests (also add coverage to lib sources) @<:@default=no@:>@])],
     [])
 
