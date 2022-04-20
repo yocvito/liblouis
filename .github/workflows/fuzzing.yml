@@ -1,0 +1,41 @@
+name: Fuzz lou_translateString
+
+on:
+  push:
+    branches: [ master ]
+    paths-ignore:
+      - README
+      - NEWS
+  pull_request:
+    branches: [ master ]
+
+jobs:
+  build:
+    name: Build with ${{ matrix.ucs }}
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        ucs: [ucs2, ucs4]
+
+    steps:
+    - uses: actions/checkout@v2
+    - name: Install dependencies
+      run: sudo apt-get update -qq && sudo apt-get install -y libyaml-dev texinfo texlive clang llvm
+    - name: Autogen
+      run: ./autogen.sh
+    - name: Configure
+      run: CC=clang CXX=clang++ ./configure --with-fuzzer
+      if: matrix.ucs == 'ucs2'
+    - name: Configure with ucs4
+      run: CC=clang CXX=clang++ ./configure --with-fuzzer --enable-ucs4
+      if: matrix.ucs == 'ucs4'
+    - name: Compile project
+      run: make -j
+    - name: Fuzz function lou_translateString()
+      run: FUZZ_TABLE=tables/en-us-g2.ctb tests/fuzzing/fuzz_translate tests/fuzzing/CORPUS 
+    - name: Store the test suite log
+      if: ${{ always() }} # store the test suite log even if the tests failed
+      uses: actions/upload-artifact@v2
+      with:
+        name: test-suite-fuzzer-${{ matrix.ucs }}.log
+        path: tests/test-suite.log

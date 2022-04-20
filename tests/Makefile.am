@@ -297,8 +297,14 @@ AM_TESTS_ENVIRONMENT =								\
 	WINE=$(WINE)								\
 	EXEEXT=$(EXEEXT)
 
+if USE_FUZZER
 fuzzing_fuzz_translate_SOURCES = fuzzing/fuzz_translate.c
-bin_PROGRAMS =  fuzzing/fuzz_translate
-fuzzing_fuzz_translate_LDADD =  $(top_builddir)/liblouis/liblouis.la
-fuzzing_fuzz_translate_CFLAGS = -fsanitize=address,fuzzer,undefined -O2 -fno-omit-frame-pointer -g -fsanitize-coverage=edge $(AM_CPPFLAGS)
-fuzzing_fuzz_translate_LDFLAGS = -static -lm ${PCAUDIOLIB_LIBS}
+fuzzing_fuzz_translate_LDADD = $(top_builddir)/liblouis/liblouis.la
+fuzzing_fuzz_translate_CFLAGS = \
+	-fsanitize=address,fuzzer,undefined \
+	-fno-omit-frame-pointer \
+	-fsanitize-coverage=edge \
+	$(AM_CPPFLAGS) 
+	-O2 -g
+bin_PROGRAMS = fuzzing/fuzz_translate
+endif
