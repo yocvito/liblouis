@@ -248,6 +248,16 @@ TAGS
 /tests/ueb_test_data/Makefile
 /tests/ueb_test_data/Makefile.in
 
+# /tests/fuzzing/
+/tests/fuzzing/crash-*
+/tests/fuzzing/oom-*
+/tests/fuzzing/leak-*
+/tests/fuzzing/fuzz-*.log
+/tests/fuzzing/*.profdata
+/tests/fuzzing/*.profraw
+/tests/fuzzing/.deps/*.Po
+/tests/fuzzing/.dirstamp
+
 # /tools/
 /tools/.libs
 /tools/.deps
@@ -264,6 +274,7 @@ TAGS
 /tools/lou_tableinfo
 /tools/lou_trace
 /tools/lou_translate
+/tools/lou_compare
 /tools/*.exe
 
 # /tools/gnulib
