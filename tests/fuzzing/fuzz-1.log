@@ -1,93 +1,41 @@
-INFO: Seed: 1028200783
-INFO: Loaded 1 modules   (8 inline 8-bit counters): 8 [0x5e8c6f, 0x5e8c77), 
-INFO: Loaded 1 PC tables (8 PCs): 8 [0x5a2b50,0x5a2bd0), 
+INFO: Seed: 3632731479
+INFO: Loaded 1 modules   (13 inline 8-bit counters): 13 [0x5af26d, 0x5af27a), 
+INFO: Loaded 1 PC tables (13 PCs): 13 [0x572360,0x572430), 
+INFO:       53 files found in CORPUS
 INFO: -max_len is not provided; libFuzzer will not generate inputs larger than 4096 bytes
-INFO: A corpus is not provided, starting from an empty corpus
-#2	INITED cov: 3 ft: 4 corp: 1/1b exec/s: 0 rss: 27Mb
-	NEW_FUNC[1/1]: 0x552220 in avoid_log /home/vito/MASTER_CSI/S2/TER/fuzzing/liblouis/tests/fuzzing/fuzz_translate.c:26
-#3	NEW    cov: 4 ft: 5 corp: 2/2b lim: 4 exec/s: 0 rss: 28Mb L: 1/1 MS: 1 ChangeBinInt-
-#12	NEW    cov: 4 ft: 6 corp: 3/6b lim: 4 exec/s: 0 rss: 29Mb L: 4/4 MS: 4 ChangeBit-ShuffleBytes-CopyPart-CopyPart-
-#18	NEW    cov: 4 ft: 7 corp: 4/7b lim: 4 exec/s: 0 rss: 29Mb L: 1/4 MS: 1 ChangeBit-
-#26	REDUCE cov: 4 ft: 7 corp: 4/6b lim: 4 exec/s: 0 rss: 29Mb L: 3/3 MS: 3 ChangeBinInt-CrossOver-EraseBytes-
-#40	REDUCE cov: 4 ft: 8 corp: 5/10b lim: 4 exec/s: 0 rss: 29Mb L: 4/4 MS: 4 CrossOver-EraseBytes-CrossOver-CopyPart-
-#54	NEW    cov: 4 ft: 9 corp: 6/14b lim: 4 exec/s: 0 rss: 29Mb L: 4/4 MS: 4 ChangeByte-CMP-CrossOver-CMP- DE: "\x01\x00"-"\xff\xff\xff\xff"-
-#133	REDUCE cov: 4 ft: 9 corp: 6/13b lim: 4 exec/s: 0 rss: 31Mb L: 3/4 MS: 4 ShuffleBytes-ShuffleBytes-ShuffleBytes-EraseBytes-
-#199	REDUCE cov: 4 ft: 9 corp: 6/12b lim: 4 exec/s: 0 rss: 32Mb L: 3/3 MS: 1 EraseBytes-
-#216	REDUCE cov: 5 ft: 10 corp: 7/14b lim: 4 exec/s: 0 rss: 32Mb L: 2/3 MS: 2 PersAutoDict-EraseBytes- DE: "\x01\x00"-
-#277	REDUCE cov: 5 ft: 10 corp: 7/13b lim: 4 exec/s: 0 rss: 33Mb L: 1/3 MS: 1 EraseBytes-
-#325	REDUCE cov: 5 ft: 10 corp: 7/12b lim: 4 exec/s: 0 rss: 34Mb L: 2/3 MS: 3 EraseBytes-CrossOver-ChangeBit-
-#581	REDUCE cov: 5 ft: 11 corp: 8/17b lim: 6 exec/s: 0 rss: 38Mb L: 5/5 MS: 1 CrossOver-
-#717	REDUCE cov: 5 ft: 11 corp: 8/16b lim: 6 exec/s: 0 rss: 40Mb L: 1/5 MS: 1 EraseBytes-
-#1452	NEW    cov: 5 ft: 12 corp: 9/27b lim: 11 exec/s: 0 rss: 51Mb L: 11/11 MS: 5 CrossOver-ChangeBit-CopyPart-EraseBytes-CopyPart-
-#4785	REDUCE cov: 5 ft: 12 corp: 9/26b lim: 43 exec/s: 0 rss: 106Mb L: 2/11 MS: 3 EraseBytes-ChangeByte-CopyPart-
-#4816	NEW    cov: 5 ft: 13 corp: 10/69b lim: 43 exec/s: 0 rss: 107Mb L: 43/43 MS: 1 InsertRepeatedBytes-
-#4822	REDUCE cov: 5 ft: 13 corp: 10/68b lim: 43 exec/s: 0 rss: 107Mb L: 1/43 MS: 1 EraseBytes-
-#20333	REDUCE cov: 5 ft: 13 corp: 10/66b lim: 191 exec/s: 0 rss: 399Mb L: 9/43 MS: 1 EraseBytes-
-#21099	REDUCE cov: 5 ft: 13 corp: 10/65b lim: 198 exec/s: 0 rss: 403Mb L: 4/43 MS: 1 EraseBytes-
-#22608	REDUCE cov: 5 ft: 13 corp: 10/63b lim: 212 exec/s: 0 rss: 408Mb L: 2/43 MS: 4 EraseBytes-ShuffleBytes-ChangeByte-ChangeBinInt-
-#22609	REDUCE cov: 5 ft: 13 corp: 10/61b lim: 212 exec/s: 0 rss: 408Mb L: 7/43 MS: 1 EraseBytes-
-#23242	REDUCE cov: 5 ft: 13 corp: 10/59b lim: 212 exec/s: 23242 rss: 410Mb L: 5/43 MS: 3 EraseBytes-ShuffleBytes-ChangeBit-
-#23438	REDUCE cov: 5 ft: 13 corp: 10/58b lim: 212 exec/s: 23438 rss: 411Mb L: 2/43 MS: 1 EraseBytes-
-#28103	REDUCE cov: 5 ft: 13 corp: 10/57b lim: 254 exec/s: 28103 rss: 416Mb L: 4/43 MS: 5 EraseBytes-ShuffleBytes-CMP-PersAutoDict-ChangeByte- DE: "\xff>"-"\xff\xff\xff\xff"-
-#37384	REDUCE cov: 5 ft: 13 corp: 10/56b lim: 341 exec/s: 37384 rss: 427Mb L: 3/43 MS: 1 EraseBytes-
-#58560	REDUCE cov: 5 ft: 13 corp: 10/55b lim: 544 exec/s: 29280 rss: 450Mb L: 2/43 MS: 1 EraseBytes-
-#65536	pulse  cov: 5 ft: 13 corp: 10/55b lim: 607 exec/s: 21845 rss: 458Mb
-#131072	pulse  cov: 5 ft: 13 corp: 10/55b lim: 1260 exec/s: 18724 rss: 496Mb
+INFO: seed corpus: files: 53 min: 38b max: 768b total: 13425b rss: 31Mb
+#55	INITED cov: 7 ft: 14 corp: 8/1026b exec/s: 0 rss: 35Mb
+#64	REDUCE cov: 7 ft: 14 corp: 8/880b lim: 211 exec/s: 0 rss: 36Mb L: 6/211 MS: 4 CMP-ChangeBit-CrossOver-ChangeByte- DE: "\xff\xff\xff\xff"-
+#83	REDUCE cov: 7 ft: 14 corp: 8/878b lim: 211 exec/s: 0 rss: 36Mb L: 4/211 MS: 4 ShuffleBytes-ChangeByte-ChangeByte-EraseBytes-
+#114	REDUCE cov: 7 ft: 14 corp: 8/815b lim: 211 exec/s: 0 rss: 37Mb L: 148/148 MS: 1 EraseBytes-
+#164	REDUCE cov: 7 ft: 14 corp: 8/813b lim: 211 exec/s: 0 rss: 37Mb L: 2/148 MS: 5 ShuffleBytes-ChangeBit-ChangeByte-ShuffleBytes-EraseBytes-
+#175	REDUCE cov: 7 ft: 14 corp: 8/807b lim: 211 exec/s: 0 rss: 38Mb L: 130/148 MS: 1 EraseBytes-
+#185	REDUCE cov: 7 ft: 14 corp: 8/789b lim: 211 exec/s: 0 rss: 38Mb L: 107/148 MS: 5 ChangeBinInt-ChangeBinInt-InsertRepeatedBytes-InsertRepeatedBytes-EraseBytes-
+#194	REDUCE cov: 7 ft: 14 corp: 8/757b lim: 211 exec/s: 0 rss: 38Mb L: 97/148 MS: 4 ChangeBit-ChangeBit-ShuffleBytes-EraseBytes-
+#217	REDUCE cov: 7 ft: 14 corp: 8/747b lim: 211 exec/s: 0 rss: 38Mb L: 97/148 MS: 3 CopyPart-ChangeBit-EraseBytes-
+#225	REDUCE cov: 7 ft: 14 corp: 8/737b lim: 211 exec/s: 0 rss: 39Mb L: 87/148 MS: 3 InsertRepeatedBytes-ChangeByte-EraseBytes-
+#249	REDUCE cov: 7 ft: 14 corp: 8/703b lim: 211 exec/s: 0 rss: 39Mb L: 63/148 MS: 4 ChangeBinInt-ChangeByte-CopyPart-CrossOver-
+#257	REDUCE cov: 7 ft: 14 corp: 8/702b lim: 211 exec/s: 0 rss: 39Mb L: 1/148 MS: 3 ChangeBit-CMP-EraseBytes- DE: "\xff\xff"-
+AddressSanitizer:DEADLYSIGNAL
 =================================================================
-==31873==ERROR: AddressSanitizer: heap-buffer-overflow on address 0x61d000000888 at pc 0x0000004c154c bp 0x7ffef4486290 sp 0x7ffef4485a50
-WRITE of size 2236 at 0x61d000000888 thread T0
-    #0 0x4c154b in memset /local/mnt/workspace/bcain_clang_bcain-ubuntu_23113/llvm/utils/release/final/llvm.src/projects/compiler-rt/lib/asan/../sanitizer_common/sanitizer_common_interceptors.inc:773:3
-    #1 0x5611f8 in _lou_translate /home/vito/MASTER_CSI/S2/TER/fuzzing/liblouis/liblouis/lou_translateString.c:1192:3
-    #2 0x560f56 in lou_translate /home/vito/MASTER_CSI/S2/TER/fuzzing/liblouis/liblouis/lou_translateString.c:1120:9
-    #3 0x560f56 in lou_translateString /home/vito/MASTER_CSI/S2/TER/fuzzing/liblouis/liblouis/lou_translateString.c:1112:9
-    #4 0x552304 in LLVMFuzzerTestOneInput /home/vito/MASTER_CSI/S2/TER/fuzzing/liblouis/tests/fuzzing/fuzz_translate.c:51:2
-    #5 0x45ce51 in fuzzer::Fuzzer::ExecuteCallback(unsigned char const*, unsigned long) /local/mnt/workspace/bcain_clang_bcain-ubuntu_23113/llvm/utils/release/final/llvm.src/projects/compiler-rt/lib/fuzzer/FuzzerLoop.cpp:553:15
-    #6 0x45c695 in fuzzer::Fuzzer::RunOne(unsigned char const*, unsigned long, bool, fuzzer::InputInfo*, bool*) /local/mnt/workspace/bcain_clang_bcain-ubuntu_23113/llvm/utils/release/final/llvm.src/projects/compiler-rt/lib/fuzzer/FuzzerLoop.cpp:469:3
-    #7 0x45e937 in fuzzer::Fuzzer::MutateAndTestOne() /local/mnt/workspace/bcain_clang_bcain-ubuntu_23113/llvm/utils/release/final/llvm.src/projects/compiler-rt/lib/fuzzer/FuzzerLoop.cpp:695:19
-    #8 0x45f655 in fuzzer::Fuzzer::Loop(std::Fuzzer::vector<fuzzer::SizedFile, fuzzer::fuzzer_allocator<fuzzer::SizedFile> >&) /local/mnt/workspace/bcain_clang_bcain-ubuntu_23113/llvm/utils/release/final/llvm.src/projects/compiler-rt/lib/fuzzer/FuzzerLoop.cpp:831:5
-    #9 0x44d418 in fuzzer::FuzzerDriver(int*, char***, int (*)(unsigned char const*, unsigned long)) /local/mnt/workspace/bcain_clang_bcain-ubuntu_23113/llvm/utils/release/final/llvm.src/projects/compiler-rt/lib/fuzzer/FuzzerDriver.cpp:825:6
-    #10 0x476882 in main /local/mnt/workspace/bcain_clang_bcain-ubuntu_23113/llvm/utils/release/final/llvm.src/projects/compiler-rt/lib/fuzzer/FuzzerMain.cpp:19:10
-    #11 0x7f095fe83d09 in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x26d09)
-    #12 0x421559 in _start (/home/vito/MASTER_CSI/S2/TER/fuzzing/liblouis/tests/fuzzing/fuzz_translate+0x421559)
+==1147768==ERROR: AddressSanitizer: SEGV on unknown address (pc 0x000000552314 bp 0x7ffffe9762a0 sp 0x7ffffe9748a0 T0)
+==1147768==The signal is caused by a READ memory access.
+==1147768==Hint: this fault was caused by a dereference of a high value address (see register values below).  Dissassemble the provided pc to learn which register was used.
+    #0 0x552314 in LLVMFuzzerTestOneInput /home/vito/MASTER_CSI/S2/TER/fuzzing/liblouis/tests/fuzzing/fuzz_translate.c:57:11
+    #1 0x45b7e1 in fuzzer::Fuzzer::ExecuteCallback(unsigned char const*, unsigned long) (/home/vito/MASTER_CSI/S2/TER/fuzzing/liblouis/tests/fuzzing/.libs/fuzz_translate+0x45b7e1)
+    #2 0x45af25 in fuzzer::Fuzzer::RunOne(unsigned char const*, unsigned long, bool, fuzzer::InputInfo*, bool*) (/home/vito/MASTER_CSI/S2/TER/fuzzing/liblouis/tests/fuzzing/.libs/fuzz_translate+0x45af25)
+    #3 0x45c950 in fuzzer::Fuzzer::MutateAndTestOne() (/home/vito/MASTER_CSI/S2/TER/fuzzing/liblouis/tests/fuzzing/.libs/fuzz_translate+0x45c950)
+    #4 0x45d3c5 in fuzzer::Fuzzer::Loop(std::__Fuzzer::vector<fuzzer::SizedFile, fuzzer::fuzzer_allocator<fuzzer::SizedFile> >&) (/home/vito/MASTER_CSI/S2/TER/fuzzing/liblouis/tests/fuzzing/.libs/fuzz_translate+0x45d3c5)
+    #5 0x44cdd5 in fuzzer::FuzzerDriver(int*, char***, int (*)(unsigned char const*, unsigned long)) (/home/vito/MASTER_CSI/S2/TER/fuzzing/liblouis/tests/fuzzing/.libs/fuzz_translate+0x44cdd5)
+    #6 0x474a22 in main (/home/vito/MASTER_CSI/S2/TER/fuzzing/liblouis/tests/fuzzing/.libs/fuzz_translate+0x474a22)
+    #7 0x7f70d0c67d09 in __libc_start_main csu/../csu/libc-start.c:308:16
+    #8 0x4215a9 in _start (/home/vito/MASTER_CSI/S2/TER/fuzzing/liblouis/tests/fuzzing/.libs/fuzz_translate+0x4215a9)
 
-0x61d000000888 is located 0 bytes to the right of 2056-byte region [0x61d000000080,0x61d000000888)
-allocated by thread T0 here:
-    #0 0x522acd in malloc /local/mnt/workspace/bcain_clang_bcain-ubuntu_23113/llvm/utils/release/final/llvm.src/projects/compiler-rt/lib/asan/asan_malloc_linux.cc:145:3
-    #1 0x5555cb in _lou_allocMem /home/vito/MASTER_CSI/S2/TER/fuzzing/liblouis/liblouis/compileTranslationTable.c:5024:14
-
-SUMMARY: AddressSanitizer: heap-buffer-overflow /local/mnt/workspace/bcain_clang_bcain-ubuntu_23113/llvm/utils/release/final/llvm.src/projects/compiler-rt/lib/asan/../sanitizer_common/sanitizer_common_interceptors.inc:773:3 in memset
-Shadow bytes around the buggy address:
-  0x0c3a7fff80c0: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
-  0x0c3a7fff80d0: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
-  0x0c3a7fff80e0: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
-  0x0c3a7fff80f0: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
-  0x0c3a7fff8100: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
-=>0x0c3a7fff8110: 00[fa]fa fa fa fa fa fa fa fa fa fa fa fa fa fa
-  0x0c3a7fff8120: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
-  0x0c3a7fff8130: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
-  0x0c3a7fff8140: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
-  0x0c3a7fff8150: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
-  0x0c3a7fff8160: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
-Shadow byte legend (one shadow byte represents 8 application bytes):
-  Addressable:           00
-  Partially addressable: 01 02 03 04 05 06 07 
-  Heap left redzone:       fa
-  Freed heap region:       fd
-  Stack left redzone:      f1
-  Stack mid redzone:       f2
-  Stack right redzone:     f3
-  Stack after return:      f5
-  Stack use after scope:   f8
-  Global redzone:          f9
-  Global init order:       f6
-  Poisoned by user:        f7
-  Container overflow:      fc
-  Array cookie:            ac
-  Intra object redzone:    bb
-  ASan internal:           fe
-  Left alloca redzone:     ca
-  Right alloca redzone:    cb
-  Shadow gap:              cc
-==31873==ABORTING
-MS: 3 CrossOver-ChangeBinInt-PersAutoDict- DE: "\xff\xff\xff\xff"-; base unit: ff5619610c19715cf6a6a74de6a79184e90f0d9d
-artifact_prefix='./'; Test unit written to ./crash-f8307d74a228d8a06362716f0378e7fd5cd35364
+AddressSanitizer can not provide additional info.
+SUMMARY: AddressSanitizer: SEGV /home/vito/MASTER_CSI/S2/TER/fuzzing/liblouis/tests/fuzzing/fuzz_translate.c:57:11 in LLVMFuzzerTestOneInput
+==1147768==ABORTING
+MS: 3 ChangeBit-InsertByte-InsertRepeatedBytes-; base unit: f6be152988879c2e7cd9859e3df662c893b2dec8
+0xa3,0x20,0x6c,0x69,0x62,0x6f,0x75,0x73,0x3a,0x45,0x6e,0x67,0x68,0x28,0x55,0x66,0x65,0x64,0x29,0x63,0x61,0x72,0x74,0x42,0x4c,0x26,0x78,0x52,0x54,0x59,0x43,0x70,0x79,0x31,0x39,0xff,0xff,0xff,0xff,0xff,0xff,0xff,0xff,0xff,0xff,0xff,0xff,0xff,0xff,0xff,0xff,0xff,0xff,0xff,0xff,0xff,0xff,0xff,0xff,0xff,0xff,0xff,0xff,0xff,0xff,0xff,0xff,0xff,0xff,0xff,0xff,0xff,0xff,0xff,0xff,0xff,0xff,0xff,0xff,0xff,0xff,0xff,0xff,0xff,0xff,0xff,0xff,0x2d,0x32,0xa8,0xc3,0xa9,0x23,0x20,0x6c,0x69,0x62,0x6f,0x75,0x73,0x3a,0x45,0x6e,0x67,0x68,0x28,0x55,0x66,0xcc,0x84,0xc2,0xb8,0xcc,0xa7,0xc2,0xa8,0xcc,0x88,0xcb,0x87,0xcc,0x8c,0xcb,0x98,0xc4,0x86,0xcb,0x9a,0xcc,0x8a,0xc2,0xa1,0xc2,0xa2,0xc2,0xa3,0xc2,0xa4,0xc2,0xa5,0xc2,0xa6,0xc2,0xa7,0xc2,0xa9,0xc2,0xaa,0xc2,0xab,0xc2,0xac,0xc2,0xae,0xc2,0xb0,0xc2,0xb1,0xc2,0xb2,0xc2,0xb3,0xc2,0xc3,0xaa,0xb5,0xc2,0xb7,0xc2,0xbc,0xc2,0x43,0x3d,0x41,0x3d,0x45,0x3d,0x49,0x3d,0xc3,0xab,0xc3,0xac,
+\xa3 libous:Engh(Ufed)cartBL&xRTYCpy19\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff-2\xa8\xc3\xa9# libous:Engh(Uf\xcc\x84\xc2\xb8\xcc\xa7\xc2\xa8\xcc\x88\xcb\x87\xcc\x8c\xcb\x98\xc4\x86\xcb\x9a\xcc\x8a\xc2\xa1\xc2\xa2\xc2\xa3\xc2\xa4\xc2\xa5\xc2\xa6\xc2\xa7\xc2\xa9\xc2\xaa\xc2\xab\xc2\xac\xc2\xae\xc2\xb0\xc2\xb1\xc2\xb2\xc2\xb3\xc2\xc3\xaa\xb5\xc2\xb7\xc2\xbc\xc2C=A=E=I=\xc3\xab\xc3\xac
+artifact_prefix='./'; Test unit written to ./crash-058a5ccac22ab2c29213fa30c036e60e30b4fbed
+Base64: oyBsaWJvdXM6RW5naChVZmVkKWNhcnRCTCZ4UlRZQ3B5MTn/////////////////////////////////////////////////////////////////////LTKow6kjIGxpYm91czpFbmdoKFVmzITCuMynwqjMiMuHzIzLmMSGy5rMisKhwqLCo8KkwqXCpsKnwqnCqsKrwqzCrsKwwrHCssKzwsOqtcK3wrzCQz1BPUU9ST3Dq8Os
