@@ -32,6 +32,13 @@ FUZZ_TABLE=../../tables/en-us-g2.ctb ./fuzz_translate CORPUS/
 FUZZ_TABLE=../../tables/en-us-g2.ctb ./fuzz_translate CORPUS/ -workers=8 -jobs=8
 ```
 
+After running the fuzzer multiple times with the same corpus directory, it might be possible that many corpus files added by the fuzzer explores the same paths. Hopefully, libfuzzer allows you to minimize a corpus. There is a simple bash script in tests/fuzzing that allows you to do that.
+```./minimize-corpus.sh CORPUS/
+
+# if you have added a POC file in the corpus directory and you want to keep it intact, change his extension to .txt and use --preserve-txt switch that keep .txt files intact in the directory
+./minimize-corpus.sh --preserve-txt CORPUS/
+```
+
 ## Look at fuzzer coverage
 
 If you want to see what are the source code parts that are explored by the fuzzer, you can use clang coverage. So, you have to configure with coverage switch, run the fuzzer and show coverage data from the run with llvm tools. 
