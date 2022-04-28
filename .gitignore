@@ -274,7 +274,6 @@ TAGS
 /tools/lou_tableinfo
 /tools/lou_trace
 /tools/lou_translate
-/tools/lou_compare
 /tools/*.exe
 
 # /tools/gnulib
