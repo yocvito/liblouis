@@ -1,3 +1,24 @@
+//
+// liblouis Braille Translation and Back-Translation Library
+//
+// Copyright (C) 2022 Anna Stan, Nicolas Morel, Kalilou Mamadou Dramé
+//
+// This file is part of liblouis.
+//
+// liblouis is free software: you can redistribute it and/or modify it
+// under the terms of the GNU Lesser General Public License as published
+// by the Free Software Foundation, either version 2.1 of the License, or
+// (at your option) any later version.
+//
+// liblouis is distributed in the hope that it will be useful, but
+// WITHOUT ANY WARRANTY; without even the implied warranty of
+// MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+// Lesser General Public License for more details.
+//
+// You should have received a copy of the GNU Lesser General Public
+// License along with liblouis. If not, see <http://www.gnu.org/licenses/>.
+//
+
 #include <stdlib.h>
 #include <stdint.h>
 #include <stdio.h>
@@ -5,6 +26,7 @@
 
 #include <internal.h>
 #include <liblouis.h>
+#include <assert.h>
 
 #define BUF_MAX 4096
 
@@ -31,6 +53,10 @@ extern int LLVMFuzzerTestOneInput(const uint8_t *data, size_t size);
 
 int
 LLVMFuzzerTestOneInput(const uint8_t *data, size_t size) {
+	int inputLen = 0;
+	int outputLen = 0;
+	char *mutable_data = NULL;
+	
 	if (!initialized)
 	{
 		lou_registerLogCallback(avoid_log);
@@ -38,24 +64,23 @@ LLVMFuzzerTestOneInput(const uint8_t *data, size_t size) {
 		initialized = 1;
 	}
 
-	int inputLen;
-	int outputLen;
-	char *mutable_data = strndup((char*)data, size);
+	mutable_data = strndup((char*)data, size);
 	if (!mutable_data) 
 	{
 		perror("malloc");
 		exit(1);
 	}
 
-	widechar inputText[size+1];
-	widechar outputText[size*16+1];
-	int ret = _lou_extParseChars(mutable_data, inputText);
+	widechar inputText[size*16+1];
+	int len = (int)_lou_extParseChars(mutable_data, inputText);
 	free(mutable_data);
-	if (ret <= 0)
+	if (len <= 0)
 		return -1;
 
-	inputLen = ret;
-	outputLen = ret*16;
+	assert(len <= (size*16));
+	inputLen = len;
+	outputLen = len*16;
+	widechar outputText[outputLen+1];
 	if (table_default == NULL)
 	{
 		fprintf(stderr, "\n" BOLDRED("[Please set up FUZZ_TABLE env var before starting fuzzer]")"\nThis environment variable is supposed to contain the table you want to test with lou_translateString()\n\n");

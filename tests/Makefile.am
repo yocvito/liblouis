@@ -1,4 +1,4 @@
-AUTOMAKE_OPTIONS = subdir-objects
+
 SUBDIRS = tables tablesWithMetadata yaml braille-specs ueb_test_data
 
 AM_CPPFLAGS =					\
@@ -304,6 +304,6 @@ fuzzing_fuzz_translate_CFLAGS = \
 	-fsanitize=address,fuzzer,undefined \
 	-fno-omit-frame-pointer \
 	$(AM_CPPFLAGS) 
-	-g
+	-g -O2
 bin_PROGRAMS = fuzzing/fuzz_translate
 endif

@@ -57,7 +57,8 @@ fuzzing/fuzz_translate-fuzz_translate.o: \
   /usr/include/string.h \
   /usr/include/x86_64-linux-gnu/bits/types/locale_t.h \
   /usr/include/x86_64-linux-gnu/bits/types/__locale_t.h \
-  /usr/include/strings.h ../liblouis/internal.h ../liblouis/liblouis.h
+  /usr/include/strings.h ../liblouis/internal.h ../liblouis/liblouis.h \
+  /usr/include/assert.h
 
 /usr/lib/llvm-11/lib/clang/11.0.1/share/asan_blacklist.txt:
 
@@ -196,3 +197,5 @@ fuzzing/fuzz_translate-fuzz_translate.o: \
 ../liblouis/internal.h:
 
 ../liblouis/liblouis.h:
+
+/usr/include/assert.h:
