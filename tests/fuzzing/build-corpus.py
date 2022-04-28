@@ -27,15 +27,15 @@ import argparse
 import shutil
 import os
 from os import O_RDONLY, O_RDWR, O_WRONLY, O_TRUNC, O_CREAT, SEEK_END, SEEK_CUR, SEEK_SET
-
-
-
+ 
+ 
+ 
 '''from pwn import *
 context.quiet'''
-
+ 
 DEFAULT_BINARY_NAME = 'fuzz_voice'
 DEFAULT_CORPUS_NAME = 'corpus.txt'
-
+ 
 def fd_get_size(fd):
     cur_off = os.lseek(fd, 0, SEEK_CUR)
     size = os.lseek(fd, 0, SEEK_END)
@@ -64,6 +64,7 @@ def isAscii(c):
     if c >= 32 and c <= 127:
         return True
     return False
+
 
 '''
     Corpus class
@@ -129,15 +130,15 @@ class Corpus:
             os.write(fd, self.dict.encode())
             os.write(fd, self.dict_uni.encode('utf-8'))
             os.close(fd)
-
+ 
 def main(argc, argv):
     if argc < 3:
         print('Summary: Build corpus from files', file=sys.stderr)
         print(f'Usage: {argv[0]} -f <file(s)> (-o <output-filename>|--stdout)', file=sys.stderr)
         exit(1)
-
+ 
     ap = argparse.ArgumentParser()
-
+ 
     # Add the arguments to the parser
     ap.add_argument("-f", "--files", required=True,
     help="the filenames list to extract char from and build corpus")
@@ -146,7 +147,7 @@ def main(argc, argv):
     ap.add_argument("-s", "--stdout", required=False, action='store_true',
     help="only display corpus to stdout")
     args = vars(ap.parse_args())
-
+ 
     files = []
     for file in args['files'].split(','):
         if file == '':
@@ -154,7 +155,7 @@ def main(argc, argv):
             print('Format is : --files=file0,file1,file2', file=sys.stderr)
             exit(1)
         files.append(file)
-
+ 
     if args['stdout'] is False and args['output'] is None:
         print('Error arguments: you need to specify an output option (file: --output|-o, stdout: --stdout|-s)', file=sys.stderr)
         exit(1)
@@ -166,7 +167,8 @@ def main(argc, argv):
         c = Corpus(files, args['output'])
     c.retrieveDict()
     c.writeDictToFile()
-
-
+ 
+ 
 if __name__ == "__main__":
     main(len(sys.argv), sys.argv)
+ 
