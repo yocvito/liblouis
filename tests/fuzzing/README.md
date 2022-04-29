@@ -60,5 +60,8 @@ LLVM_PROFILE_FILE=fuzz_translate.profraw FUZZ_TABLE=../../tables/en-us-g2.ctb ./
 llvm-profdata merge -sparse fuzz_translate.profraw -o fuzz_translate.profdata
 
 # show coverage (redlines are the one wich are reached)
-llvm-cov show ./fuzz_translate -instr-profile=fuzz_translate.profdata
+# Actually tests/fuzzing/fuzz_translate is just a wrapper to tests/fuzzing/.libs/fuzz_translate, 
+# so for covering we directly pass the binary
+llvm-cov show .libs/fuzz_translate -instr-profile=fuzz_translate.profdata
+
 ```
