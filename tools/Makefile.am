@@ -59,9 +59,6 @@ lou_trace_SOURCES = lou_trace.c
 lou_checkyaml_SOURCES =	lou_checkyaml.c
 lou_tableinfo_SOURCES =	lou_tableinfo.c
 
-
-
-
 if !CROSS_COMPILING
 dist_bin_SCRIPTS = \
 	lou_maketable.d/lou_maketable

@@ -249,14 +249,14 @@ TAGS
 /tests/ueb_test_data/Makefile.in
 
 # /tests/fuzzing/
-/tests/fuzzing/crash-*
-/tests/fuzzing/oom-*
-/tests/fuzzing/leak-*
-/tests/fuzzing/fuzz-*.log
+/tests/fuzzing/.deps
+/tests/fuzzing/.dirstamp
 /tests/fuzzing/*.profdata
 /tests/fuzzing/*.profraw
-/tests/fuzzing/.deps/*.Po
-/tests/fuzzing/.dirstamp
+/tests/fuzzing/crash-*
+/tests/fuzzing/fuzz-*.log
+/tests/fuzzing/leak-*
+/tests/fuzzing/oom-*
 
 # /tools/
 /tools/.libs

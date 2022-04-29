@@ -305,5 +305,5 @@ fuzzing_fuzz_translate_CFLAGS = \
 	-fno-omit-frame-pointer \
 	$(AM_CPPFLAGS) 
 	-g -O2
-bin_PROGRAMS = fuzzing/fuzz_translate
+noinst_PROGRAMS = fuzzing/fuzz_translate
 endif

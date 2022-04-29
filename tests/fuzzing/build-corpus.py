@@ -45,23 +45,29 @@ def fd_get_size(fd):
 
 '''
     Check if a bytestring (should be a 2 letter bytestring) is an unicode character
+
+    (
+    As it doesn't check if the string passed (s) or a substring is a valid ascii 
+    or utf value that we just added to corpus, it can add more characters than it
+    was originally contained in files.
+    However, it can be usefull to add more chars to corpus file so we dont fix this for now.
+    )
     
     Returns the int value of the char and True if it is an unicode char, otherwise None and False
 '''
 def isUnicode(s):
     c=None
-    if (not isAscii(s[0])) and (not isAscii(s[1])): 
-        try:
-            c=ord(s.decode('utf-8'))
-            if (c > 0 and c < 0xffff) or (c > 0xe000 and c < 0x10ffff):
-                return c, True
-        except:
-            pass
+    try:
+        c=ord(s.decode('utf-8'))
+        if (c > 0 and c < 0xffff) or (c > 0xe000 and c < 0x10ffff):
+            return c, True
+    except:
+        pass
     return None, False
 
 
 def isAscii(c):
-    if c >= 32 and c <= 127:
+    if c > 0 and c <= 127:
         return True
     return False
 
@@ -143,7 +149,7 @@ def main(argc, argv):
     ap.add_argument("-f", "--files", required=True,
     help="the filenames list to extract char from and build corpus")
     ap.add_argument("-o", "--output", required=False,
-    help="the output filename for the corpus file. If size exceed 4096, corpus is splited into files called <your-filename>-N.<your-ext> (extension is automatically extracted)")
+    help="the output filename for the corpus file.")
     ap.add_argument("-s", "--stdout", required=False, action='store_true',
     help="only display corpus to stdout")
     args = vars(ap.parse_args())
