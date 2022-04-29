@@ -218,6 +218,17 @@ TAGS
 /tests/braille-specs/*.log
 /tests/braille-specs/*.trs
 
+# /tests/fuzzing/
+/tests/fuzzing/.deps
+/tests/fuzzing/.dirstamp
+/tests/fuzzing/*.profdata
+/tests/fuzzing/*.profraw
+/tests/fuzzing/CORPUS/*
+/tests/fuzzing/crash-*
+/tests/fuzzing/fuzz-*.log
+/tests/fuzzing/leak-*
+/tests/fuzzing/oom-*
+
 # /tests/yaml/
 /tests/yaml/Makefile
 /tests/yaml/Makefile.in
@@ -247,16 +258,6 @@ TAGS
 # /tests/ueb_test_data/
 /tests/ueb_test_data/Makefile
 /tests/ueb_test_data/Makefile.in
-
-# /tests/fuzzing/
-/tests/fuzzing/.deps
-/tests/fuzzing/.dirstamp
-/tests/fuzzing/*.profdata
-/tests/fuzzing/*.profraw
-/tests/fuzzing/crash-*
-/tests/fuzzing/fuzz-*.log
-/tests/fuzzing/leak-*
-/tests/fuzzing/oom-*
 
 # /tools/
 /tools/.libs

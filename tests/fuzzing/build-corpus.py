@@ -22,11 +22,9 @@
 #
 
 import sys
-import mmap
 import argparse
-import shutil
 import os
-from os import O_RDONLY, O_RDWR, O_WRONLY, O_TRUNC, O_CREAT, SEEK_END, SEEK_CUR, SEEK_SET
+from os import O_WRONLY, O_TRUNC, O_CREAT, SEEK_END, SEEK_CUR, SEEK_SET
  
  
  
@@ -149,7 +147,7 @@ def main(argc, argv):
     ap.add_argument("-f", "--files", required=True,
     help="the filenames list to extract char from and build corpus")
     ap.add_argument("-o", "--output", required=False,
-    help="the output filename for the corpus file.")
+    help="the output filename for the corpus file")
     ap.add_argument("-s", "--stdout", required=False, action='store_true',
     help="only display corpus to stdout")
     args = vars(ap.parse_args())
