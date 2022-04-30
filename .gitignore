@@ -221,6 +221,7 @@ TAGS
 # /tests/fuzzing/
 /tests/fuzzing/.deps
 /tests/fuzzing/.dirstamp
+/tests/fuzzing/.libs
 /tests/fuzzing/*.profdata
 /tests/fuzzing/*.profraw
 /tests/fuzzing/CORPUS/*
