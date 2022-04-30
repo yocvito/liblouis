@@ -32,7 +32,7 @@ jobs:
     - name: Compile project
       run: make -j
     - name: Fuzz function lou_translateString()
-      run: FUZZ_TABLE=tables/en-us-g2.ctb tests/fuzzing/fuzz_translate tests/fuzzing/CORPUS 
+      run: FUZZ_TABLE=tables/en-us-g2.ctb tests/fuzzing/fuzz_translate tests/fuzzing/CORPUS -seed=1234 -runs=10000 
     - name: Store the test suite log
       if: ${{ always() }} # store the test suite log even if the tests failed
       uses: actions/upload-artifact@v2
