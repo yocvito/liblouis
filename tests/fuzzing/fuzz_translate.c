@@ -56,7 +56,7 @@ LLVMFuzzerTestOneInput(const uint8_t *data, size_t size) {
 	int inputLen = 0;
 	int outputLen = 0;
 	char *mutable_data = NULL;
-	
+
 	if (!initialized)
 	{
 		lou_registerLogCallback(avoid_log);
@@ -64,20 +64,22 @@ LLVMFuzzerTestOneInput(const uint8_t *data, size_t size) {
 		initialized = 1;
 	}
 
-	mutable_data = strndup((char*)data, size);
-	if (!mutable_data) 
-	{
-		perror("malloc");
+	mutable_data = calloc(size + 1, 1);
+	if (!mutable_data) {
+		perror("calloc");
 		exit(1);
 	}
+	memcpy(mutable_data, data, size);
+	//mutable_data[size] = 0;
 
 	widechar inputText[size*16+1];
 	int len = (int)_lou_extParseChars(mutable_data, inputText);
 	free(mutable_data);
 	if (len <= 0)
 		return -1;
+	inputText[size * 16] = 0;
 
-	assert(len <= (size*16));
+	assert(len <= size*16);
 	inputLen = len;
 	outputLen = len*16;
 	widechar outputText[outputLen+1];
